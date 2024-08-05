@@ -20,56 +20,69 @@ class Categoria extends BaseController
         $data['categorias'] = $categorias;
 
         echo view('template/header'); 
-        echo view('lista_categoria', $data);
+        echo view('categoria/listar', $data);
         echo view('template/footer');
     }
 
     public function agregar()
     {
         echo view('template/header'); 
-        echo view('agregar_categoria');
+        echo view('categoria/agregar');
         echo view('template/footer');
     } 
 
     public function agregarbd()
     {
-        $data = [
-            'nombre' => strtoupper($this->request->getPost('nombre'))
+        $rules = [
+            'nombre' => 'required'
         ];
 
-        $this->categoria->save($data);
+        if ($this->validate($rules)) {
+            $data = [
+                'nombre' => strtoupper($this->request->getPost('nombre'))
+            ];
 
-        return redirect()->to(base_url('categoria'));
+            $this->categoria->save($data);
+            return redirect()->to(base_url('categoria'))->with('success', 'Categoría agregada con éxito');
+        } else {
+            return redirect()->back()->withInput()->with('errors', $this->validator->getErrors());
+        }
     }
 
     public function editar($id)
     {
         $categoria = $this->categoria->find($id);
-        $data['categoria'] = $categoria; // Cambiado de 'categorias' a 'categoria'
+        $data['categorias'] = $categoria;
 
         echo view('template/header'); 
-        echo view('editar_categoria', $data);
+        echo view('categoria/editar', $data);
         echo view('template/footer');
     }
 
     public function actualizarbd()
     {
-        $id = $this->request->getPost('id');
-
-        $data = [
-            'nombre' => strtoupper($this->request->getPost('nombre'))
+        $rules = [
+            'nombre' => 'required'
         ];
 
-        $this->categoria->update($id, $data);
+        $id = $this->request->getPost('id');
 
-        return redirect()->to(base_url('categoria'));
+        if ($this->validate($rules)) {
+            $data = [
+                'nombre' => strtoupper($this->request->getPost('nombre'))
+            ];
+
+            $this->categoria->update($id, $data);
+            return redirect()->to(base_url('categoria'))->with('success', 'Categoría actualizada con éxito');
+        } else {
+            return redirect()->back()->withInput()->with('errors', $this->validator->getErrors());
+        }
     }
 
     public function eliminarbd($id)
     {
         $this->categoria->update($id, ['estado' => 0]);
-
-        return redirect()->to(base_url('categoria'));
+        return redirect()->to(base_url('categoria'))->with('success', 'Categoría eliminada con éxito');
     }
 
     public function eliminados()
@@ -78,14 +91,13 @@ class Categoria extends BaseController
         $data['categorias'] = $categorias;
 
         echo view('template/header'); 
-        echo view('eliminadas_categorias', $data);
+        echo view('categoria/eliminados', $data);
         echo view('template/footer');
     }
 
     public function integrar($id)
     {
         $this->categoria->update($id, ['estado' => 1]);
-
-        return redirect()->to(base_url('categoria/eliminados'));
+        return redirect()->to(base_url('categoria/eliminados'))->with('success', 'Categoría reintegrada con éxito');
     }
 }
