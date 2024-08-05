@@ -20,14 +20,14 @@ class Usuario extends BaseController
         $data['usuarios'] = $usuarios;
         
         echo view('template/header'); 
-        echo view('lista_usuario', $data);
+        echo view('usuario/listar', $data);
         echo view('template/footer');
     }
 
     public function agregar()
     {
         echo view('template/header'); 
-        echo view('agregar_usuario');
+        echo view('usuario/agregar');
         echo view('template/footer');
     }
 
@@ -59,7 +59,7 @@ class Usuario extends BaseController
         $data['usuario'] = $usuario; // Cambiado 'usuarios' a 'usuario' para mayor claridad
 
         echo view('template/header'); 
-        echo view('editar_usuario', $data);
+        echo view('usuario/editar', $data);
         echo view('template/footer');
     }
 
@@ -103,7 +103,7 @@ class Usuario extends BaseController
         $data['usuarios'] = $usuarios;
         
         echo view('template/header'); 
-        echo view('eliminados_usuarios', $data);
+        echo view('usuario/eliminados', $data);
         echo view('template/footer');
     }
 

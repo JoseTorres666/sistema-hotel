@@ -1,8 +1,7 @@
-<!-- inicio contenido -->
 <div class="container-fluid">
     <div class="row">
         <div class="card-box table-responsive">
-            <h1 class="header-title">Agregar Categoria</h1><br>
+            <h1 class="header-title">Agregar Categoría</h1>
             <?php if (session()->get('errors')): ?>
                 <div class="alert alert-danger">
                     <?php foreach (session()->get('errors') as $error): ?>
@@ -15,19 +14,20 @@
                     <?= session()->get('success') ?>
                 </div>
             <?php endif ?>
-            <?= form_open_multipart('categoria/agregarbd'); ?>
+            <?php echo form_open('categoria/agregarbd'); ?>
             <div class="form-group">
                 <div class="row">
                     <div class="col-12 col-sm-12">
-                        <label for="nombre">Nombre</label>
-                        <textarea class="form-control" id="nombre" name="nombre" required></textarea>
+                        <label>Nombre</label>
+                        <input class="form-control" id="nombre" name="nombre" type="text" required>
                     </div>
                 </div>
             </div>
-            <a href="<?= base_url(); ?>/categoria" class="btn btn-success">Volver</a>
-            <button type="submit" class="btn btn-primary">Agregar</button>
-            <?= form_close(); ?>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Agregar</button>
+                <a href="<?php echo base_url('categoria'); ?>" class="btn btn-danger">Cancelar</a>
+            </div>
+            <?php echo form_close(); ?>
         </div>
-    </div><!-- end row -->
-</div><!-- end container-fluid -->
-<!-- fin contenido -->
+    </div>
+</div>
