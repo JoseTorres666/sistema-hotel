@@ -52,7 +52,7 @@ class Categoria extends BaseController
     public function editar($id)
     {
         $categoria = $this->categoria->find($id);
-        $data['categorias'] = $categoria;
+        $data['categoria'] = $categoria;
 
         echo view('template/header'); 
         echo view('categoria/editar', $data);

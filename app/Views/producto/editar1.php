@@ -15,10 +15,10 @@
                     <?= session()->get('success') ?>
                 </div>
             <?php endif ?>
-            <?php echo form_open_multipart('producto/actualizarbd'); ?>
-            <input type="hidden" name="id" value="<?php echo $producto['id']; ?>">
+            <?php form_open('producto/actualizarbd'); ?>
+            <input type="hidden" name="idproducto" value="<?php echo $producto['id']; ?>">
             <div class="form-group">
-            <div class="row">
+                <div class="row">
                     <div class="col-12 col-sm-6">
                         <label>Nombre</label>
                         <input class="form-control" id="nombre" name="nombre"  value="<?php echo $producto['nombre']; ?>" type="text" required>
@@ -48,10 +48,10 @@
             </div>
             <div class="form-group">
                 <button type="submit" class="btn btn-primary">Actualizar</button>
-                <a href="<?php echo base_url('usuario'); ?>" class="btn btn-danger">Cancelar</a>
+                <a href="<?= base_url('producto'); ?>" class="btn btn-danger">Cancelar</a>
             </div>
-            <?php echo form_close(); ?>
+            <?= form_close(); ?>
         </div>
-    </div>
-</div>
+    </div><!-- end row -->
+</div><!-- end container-fluid -->
 <!-- fin contenido -->

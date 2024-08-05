@@ -80,7 +80,6 @@ class Producto extends BaseController
         echo view('template/footer');
     }
 
-
     public function actualizarbd()
     {
         $rules = [
@@ -102,9 +101,15 @@ class Producto extends BaseController
                 'stock' => $this->request->getPost('stock')
             ];
 
+            // Depuración
+            log_message('debug', 'Datos recibidos para actualizar: ' . print_r($data, true));
+
             $this->producto->update($id, $data);
             return redirect()->to(base_url('producto'))->with('success', 'Producto actualizado con éxito');
         } else {
+            // Depuración
+            log_message('debug', 'Errores de validación: ' . print_r($this->validator->getErrors(), true));
+
             return redirect()->back()->withInput()->with('errors', $this->validator->getErrors());
         }
     }
