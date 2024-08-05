@@ -28,7 +28,7 @@
                         <td><?php echo $contador; ?></td>
                         <td><?php echo $categoria['nombre']; ?></td>
                         <td>
-                            <a href="<?php echo base_url('categoria/editar/'.$categoria['id']); ?>" class="btn btn-warning"><i class="fa-solid fa-cart-shopping"></i></a>
+                            <a href="<?php echo base_url('categoria/editar/'.$categoria['id']); ?>" class="btn btn-warning"><i class="fa-solid fa-pencil"></i></a>
                         </td>
                         <td>
                             <a href="#" data-href="<?php echo base_url('categoria/eliminarbd/'.$categoria['id']); ?>" 

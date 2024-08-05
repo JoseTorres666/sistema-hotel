@@ -40,7 +40,7 @@
                         <td><?php echo $producto['precio_compra']; ?></td>
                         <td><?php echo $producto['stock']; ?></td>
                         <td>
-                            <a href="<?php echo base_url('producto/editar/'.$producto['id']); ?>" class="btn btn-warning"><i class="fa-solid fa-cart-shopping"></i></a>
+                            <a href="<?php echo base_url('producto/editar/'.$producto['id']); ?>" class="btn btn-warning"><i class="fa-solid fa-pencil"></i></i></a>
                         </td>
                         <td>
                             <a href="#" data-href="<?php echo base_url('producto/eliminarbd/'.$producto['id']); ?>" 

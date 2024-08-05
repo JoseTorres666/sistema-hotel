@@ -41,7 +41,7 @@
                         <td><?php echo $usuario['rol']; ?></td>
                         <td><?php echo $usuario['email']; ?></td>
                         <td>
-                            <a href="<?php echo base_url('usuario/editar/'.$usuario['id']); ?>" class="btn btn-warning"><i class="fa-solid fa-user-pen"></i></a>
+                            <a href="<?php echo base_url('usuario/editar/'.$usuario['id']); ?>" class="btn btn-warning"><i class="fa-solid fa-pencil"></i></a>
                         </td>
                         <td>
                             <a href="#" data-href="<?php echo base_url('usuario/eliminarbd/'.$usuario['id']); ?>" 
