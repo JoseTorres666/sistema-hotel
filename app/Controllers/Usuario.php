@@ -29,7 +29,6 @@ class Usuario extends BaseController
         echo view('template/header'); 
         echo view('usuario/agregar');
         echo view('template/footer');
-        sad
     }
 
     public function agregarbd()
