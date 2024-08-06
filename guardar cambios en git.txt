@@ -1,0 +1,11 @@
+# 1. Actualiza tu copia local con los cambios del repositorio remoto
+git pull 
+
+# 2. Añadir todos los cambios
+git add .
+
+# 3. Confirmar los cambios con un mensaje
+git commit -m "Descripción de los cambios"
+
+# 4. Empujar los cambios al repositorio remoto
+git push 
