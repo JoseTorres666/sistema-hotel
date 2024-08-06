@@ -21,14 +21,14 @@ if (file_exists(SYSTEMPATH . 'Config/Routes.php')) {
  * --------------------------------------------------------------------
  */
 $routes->setDefaultNamespace('App\Controllers');
-$routes->setDefaultController('Usuario');
+$routes->setDefaultController('Login');
 $routes->setDefaultMethod('index');
 $routes->setTranslateURIDashes(false);
 $routes->set404Override();
 $routes->setAutoRoute(true);
 
 // Definir rutas específicas
-$routes->get('/', 'Usuario::index');
+$routes->get('/', 'Login::index');
 
 // Puedes añadir más rutas aquí según tus necesidades
 

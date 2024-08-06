@@ -4,7 +4,7 @@
         <div class="card-box table-responsive">
             <h1 class="header-title">Editar Usuario</h1><br>
             <?php echo form_open_multipart('usuario/actualizarbd'); ?>
-            <input type="hidden" name="idusuario" value="<?php echo $usuario['id']; ?>">
+            <input type="hidden" name="id" value="<?php echo $usuario['id']; ?>">
             <div class="form-group">
                 <div class="row">
                     <div class="col-12 col-sm-6">
@@ -13,7 +13,7 @@
                     </div>
                     <div class="col-12 col-sm-6">
                         <label for="apellido_paterno">Apellido Paterno</label>
-                        <input class="form-control" id="apellido_paterno" name="apellido_paterno" type="text" value="<?php echo $usuario['apellido_paterno']; ?>" required>
+                        <input class="form-control" id="apellido_paterno" name="apellido_paterno" type="text" value="<?php echo $usuario['apellido_paterno']; ?>">
                     </div>
                     <div class="col-12 col-sm-6">
                         <label for="apellido_materno">Apellido Materno</label>

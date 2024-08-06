@@ -2,10 +2,13 @@
 <div class="container-fluid">
     <div class="row">
         <div class="card-box table-responsive">
-            <h1 class="header-title">Lista de Usuarios Eliminados</h1></br>
+            <h1 class="header-title"> Lista de Usuario </h1> </br>
             <div>
-                <a href="<?php echo base_url('usuario'); ?>">
-                    <button type="button" class="btn btn-dark">Usuarios Activos</button>
+                <a href="<?php echo base_url('usuario/agregar'); ?>">
+                    <button type="button" class="btn btn-primary">Agregar Usuario</button>
+                </a>
+                <a href="<?php echo base_url('usuario/eliminados'); ?>">
+                    <button type="button" class="btn btn-dark">Usuarios Eliminados</button>
                 </a>
             </div>
             </br>
@@ -13,14 +16,15 @@
                 <thead>
                     <tr>
                         <th>N°</th>
-                        <th>Nombres</th>
+                        <th>Nombres </th>
                         <th>Apellido Paterno</th>
                         <th>Apellido Materno</th>
                         <th>Teléfono</th>
                         <th>Sueldo</th>
                         <th>Rol</th>
                         <th>Email</th>
-                        <th>Integrar</th>
+                        <th>Modificar</th>
+                        <th>Eliminar</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -37,11 +41,12 @@
                         <td><?php echo $usuario['rol']; ?></td>
                         <td><?php echo $usuario['email']; ?></td>
                         <td>
-                          <a href="#" data-href="<?php echo base_url('usuario/integrar/'.$usuario['id']); ?>" 
+                            <a href="<?php echo base_url('usuario/editar/'.$usuario['id']); ?>" class="btn btn-warning"><i class="fa-solid fa-pencil"></i></a>
+                        </td>
+                        <td>
+                            <a href="#" data-href="<?php echo base_url('usuario/eliminarbd/'.$usuario['id']); ?>" 
                             data-toggle="modal" data-target="#modal-confirma" data-placement="top" 
-                            title="Reingresar Registro" class="btn btn-purple">
-                            <i class="fa-solid fa-recycle"></i>
-                          </a>
+                            title="Eliminar Registro" class="btn btn-danger"><i class="fa-solid fa-trash"></i></a>
                         </td>
                     </tr>
                     <?php
@@ -58,13 +63,13 @@
   <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Reingresar usuario</h5>
+        <h5 class="modal-title" id="exampleModalLongTitle">Eliminar Usuario</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        <p>¿Estás seguro de reingresar a este usuario?</p>
+        <p>¿Estás seguro de eliminar este Usuario?</p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>

@@ -16,6 +16,10 @@ class Usuario extends BaseController
 
     public function index()
     {
+        /*if (!session()->get('isLoggedIn')) {
+            return redirect()->to('login');
+        }*/
+
         $usuarios = $this->usuario->where('estado', 1)->findAll();
         $data['usuarios'] = $usuarios;
         
@@ -23,6 +27,7 @@ class Usuario extends BaseController
         echo view('usuario/listar', $data);
         echo view('template/footer');
     }
+
 
     public function agregar()
     {
@@ -33,23 +38,31 @@ class Usuario extends BaseController
 
     public function agregarbd()
     {
-        // Datos de usuario transformados a mayúsculas
-        $usuarioData = [
-            'nombres' => strtoupper($this->request->getPost('nombres')),
-            'apellido_paterno' => strtoupper($this->request->getPost('apellido_paterno')),
-            'apellido_materno' => strtoupper($this->request->getPost('apellido_materno')),
-            'telefono' => $this->request->getPost('telefono'),
-            'sueldo' => $this->request->getPost('sueldo'),
-            'rol' => strtoupper($this->request->getPost('rol')),
-            'email' => $this->request->getPost('email'),
-            'password' => password_hash($this->request->getPost('password'), PASSWORD_DEFAULT) // Asegurando la contraseña
+        $rules = [
+            'nombres' => 'required',
+            'apellido_paterno' => 'required',
+            'telefono' => 'required',
+            'sueldo' => 'required',
+            'rol' => 'required',
+            'email' => 'required',
+            'password' => 'required',
         ];
-
-        // Guardar usuario
-        $this->usuario->save($usuarioData);
-
-        // Redireccionar con éxito
-        return redirect()->to(base_url('usuario'));
+        if ($this->validate($rules)) {
+            $data = [
+                'nombres' => strtoupper($this->request->getPost('nombres')),
+                'apellido_paterno' => strtoupper($this->request->getPost('apellido_paterno')),
+                'apellido_materno' => strtoupper($this->request->getPost('apellido_materno')),
+                'telefono' => $this->request->getPost('telefono'),
+                'sueldo' => $this->request->getPost('sueldo'),
+                'rol' => strtoupper($this->request->getPost('rol')),
+                'email' => $this->request->getPost('email'),
+                'password' => password_hash($this->request->getPost('password'), PASSWORD_DEFAULT)
+            ];
+            $this->usuario->save($data);
+            return redirect()->to(base_url('usuario'))->with('success', 'usuario agregado con éxito');
+        } else {
+            return redirect()->back()->withInput()->with('errors', $this->validator->getErrors());
+        }    
     }
 
 
@@ -65,26 +78,42 @@ class Usuario extends BaseController
 
     public function actualizarbd()
     {
-        // Obtener el ID del usuario
-        $idusuario = $this->request->getPost('idusuario');
-
-        // Datos de usuario transformados a mayúsculas
-        $usuarioData = [
-            'nombres' => strtoupper($this->request->getPost('nombres')),
-            'apellido_paterno' => strtoupper($this->request->getPost('apellido_paterno')),
-            'apellido_materno' => strtoupper($this->request->getPost('apellido_materno')),
-            'telefono' => $this->request->getPost('telefono'),
-            'sueldo' => $this->request->getPost('sueldo'),
-            'rol' => strtoupper($this->request->getPost('rol')),
-            'email' => $this->request->getPost('email'),
-            'password' => password_hash($this->request->getPost('password'), PASSWORD_DEFAULT) // Asegurando la contraseña
+        $rules = [
+            'nombres' => 'required',
+            'apellido_paterno' => 'required',
+            'telefono' => 'required',
+            'sueldo' => 'required',
+            'rol' => 'required',
+            'email' => 'required'
         ];
+        
+        $id = $this->request->getPost('id');
 
-        // Actualizar usuario
-        $this->usuario->update($idusuario, $usuarioData);
+        if ($this->validate($rules)) {
+            $data = [
+                'nombres' => strtoupper($this->request->getPost('nombres')),
+                'apellido_paterno' => strtoupper($this->request->getPost('apellido_paterno')),
+                'apellido_materno' => strtoupper($this->request->getPost('apellido_materno')),
+                'telefono' => $this->request->getPost('telefono'),
+                'sueldo' => $this->request->getPost('sueldo'),
+                'rol' => strtoupper($this->request->getPost('rol')),
+                'email' => $this->request->getPost('email')
+            ];
 
-        // Redireccionar con éxito
-        return redirect()->to(base_url('usuario'));
+            // Depuración
+            if ($id === null) {
+                return redirect()->back()->withInput()->with('errors', ['id' => 'ID de usuario no proporcionado.']);
+            }
+
+            // Depuración
+            if ($this->usuario->update($id, $data)) {
+                return redirect()->to(base_url('usuario'))->with('success', 'Usuario actualizado con éxito');
+            } else {
+                return redirect()->back()->withInput()->with('errors', ['update' => 'No se pudo actualizar el usuario.']);
+            }
+        } else {
+            return redirect()->back()->withInput()->with('errors', $this->validator->getErrors());
+        }    
     }
 
 

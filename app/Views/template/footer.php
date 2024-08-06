@@ -36,6 +36,9 @@
         <!-- Responsive examples -->
         <script src="<?php echo base_url(); ?>assets/libs/datatables/dataTables.responsive.min.js"></script>
         <script src="<?php echo base_url(); ?>assets/libs/datatables/responsive.bootstrap4.min.js"></script>
+        
+        <!-- Vendor js -->
+    <script src="<?php echo base_url(); ?>assets/js/vendor.min.js"></script>
 
         <!-- Datatables init -->
         <script src="<?php echo base_url(); ?>assets/js/pages/datatables.init.js"></script>

@@ -25,9 +25,11 @@
                         <td><?php echo $contador; ?></td>
                         <td><?php echo $categoria['nombre']; ?></td>
                         <td>
-                            <a href="#" data-href="<?php echo base_url('categoria/integrar/'.$categoria['id']); ?>" 
+                        <a href="#" data-href="<?php echo base_url('categoria/integrar/'.$categoria['id']); ?>" 
                             data-toggle="modal" data-target="#modal-confirma" data-placement="top" 
-                            title="Reingresar Categoría" class="btn btn-purple"><i class="fa-solid fa-address-book"></i></a>
+                            title="Reingresar Categoría" class="btn btn-purple">
+                            <i class="fa-solid fa-recycle"></i>
+                        </a>
                         </td>
                     </tr>
                     <?php

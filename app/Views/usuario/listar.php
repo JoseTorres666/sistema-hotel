@@ -72,7 +72,6 @@
         <p>¿Estás seguro de eliminar este Usuario?</p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
         <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
         <a class="btn btn-primary btn-ok">Sí</a>
       </div>

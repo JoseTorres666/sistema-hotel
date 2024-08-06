@@ -37,11 +37,9 @@
                         <td><?php echo $usuario['rol']; ?></td>
                         <td><?php echo $usuario['email']; ?></td>
                         <td>
-                          <a href="#" data-href="<?php echo base_url('usuario/integrar/'.$usuario['id']); ?>" 
+                            <a href="#" data-href="<?php echo base_url('usuario/integrar/'.$usuario['id']); ?>" 
                             data-toggle="modal" data-target="#modal-confirma" data-placement="top" 
-                            title="Reingresar Registro" class="btn btn-purple">
-                            <i class="fa-solid fa-recycle"></i>
-                          </a>
+                            title="Reingresar Registro" class="btn btn-purple"><i class="fa-solid fa-address-book"></i></a>
                         </td>
                     </tr>
                     <?php
