@@ -9,3 +9,6 @@ git commit -m "Descripción de los cambios"
 
 # 4. Empujar los cambios al repositorio remoto
 git push 
+
+# para deshacer todos los cambios del stage
+git clean -fd
