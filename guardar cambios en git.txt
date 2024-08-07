@@ -13,4 +13,4 @@ git push
 # para deshacer todos los cambios del stage
 git clean -fd
 # si no funfiona deshacer cambios poner
-git estore .
+git restore .
