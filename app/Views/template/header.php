@@ -35,6 +35,18 @@ $user_session = session();
                 </div>
             </li>
         </ul>
+        <div class="logo-box">
+            <a href="index.html" class="logo text-center">
+                        <span class="logo-lg">
+                            <img src="<?php echo base_url();?>assets/images/logo-light.png" alt="" height="25">
+                            <!-- <span class="logo-lg-text-light">UBold</span> -->
+                        </span>
+                        <span class="logo-sm">
+                            <!-- <span class="logo-sm-text-dark">U</span> -->
+                            <img src="<?php echo base_url();?>assets/images/logo-sm.png" alt="" height="28">
+                        </span>
+            </a>
+        </div>
     </div>
 
     
