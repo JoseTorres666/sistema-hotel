@@ -17,7 +17,7 @@
                     </div>
                     <div class="col-12 col-sm-6">
                         <label for="apellido_materno">Apellido Materno</label>
-                        <input class="form-control" id="apellido_materno" name="apellido_materno" type="text" value="<?php echo $usuario['apellido_materno']; ?>" required>
+                        <input class="form-control" id="apellido_materno" name="apellido_materno" type="text" value="<?php echo $usuario['apellido_materno']; ?>">
                     </div>
                     <div class="col-12 col-sm-6">
                         <label for="telefono">Teléfono</label>

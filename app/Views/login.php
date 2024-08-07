@@ -8,12 +8,12 @@
     <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
     <meta content="Coderthemes" name="author" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link rel="shortcut icon" href="<?php echo base_url(); ?>assets/images/favicon.ico">
-    <link href="<?php echo base_url(); ?>assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" id="bootstrap-stylesheet" />
-    <link href="<?php echo base_url(); ?>assets/css/icons.min.css" rel="stylesheet" type="text/css" />
-    <link href="<?php echo base_url(); ?>assets/css/app.min.css" rel="stylesheet" type="text/css" id="app-stylesheet" />
-    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/iconos/css/all.min.css"/>
-    <script src="<?php echo base_url(); ?>assets/iconos/js/all.min.js"></script>
+    <link rel="shortcut icon" href="<?= base_url(); ?>assets/images/favicon.ico">
+    <link href="<?= base_url(); ?>assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" id="bootstrap-stylesheet" />
+    <link href="<?= base_url(); ?>assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="<?= base_url(); ?>assets/css/app.min.css" rel="stylesheet" type="text/css" id="app-stylesheet" />
+    <link rel="stylesheet" href="<?= base_url(); ?>assets/iconos/css/all.min.css"/>
+    <script src="<?= base_url(); ?>assets/iconos/js/all.min.js"></script>
 </head>
 
 <body class="authentication-bg bg-dark authentication-bg-pattern d-flex align-items-center pb-0 vh-100">
@@ -28,7 +28,7 @@
                                 <div class="account-logo-box">
                                     <div class="text-center">
                                         <a href="index.html">
-                                            <img src="<?php echo base_url(); ?>assets/images/logo-dark.png" alt="" height="30">
+                                            <img src="<?= base_url(); ?>assets/images/logo-dark.png" alt="" height="30">
                                         </a>
                                     </div>
                                     <h3 class="text-uppercase mb-1 mt-4 center">Iniciar sesión</h3>
@@ -36,7 +36,7 @@
                                 </div>
 
                                 <div class="account-content mt-4">
-                                    <form class="form-horizontal" method="POST" action="<?php echo base_url();?>/login/validar">
+                                    <form class="form-horizontal" method="POST" action="<?= base_url();?>/login/validar">
                                         <div class="form-group row">
                                             <div class="col-12">
                                                 <label for="email">Dirección de correo electrónico</label>
@@ -80,8 +80,8 @@
                 </div>
         </div>
     </div>
-    <script src="<?php echo base_url(); ?>assets/js/vendor.min.js"></script>
-    <script src="<?php echo base_url(); ?>assets/js/app.min.js"></script>
+    <script src="<?= base_url(); ?>assets/js/vendor.min.js"></script>
+    <script src="<?= base_url(); ?>assets/js/app.min.js"></script>
 </body>
 
 </html>

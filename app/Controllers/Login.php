@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Controllers;
 
 use App\Controllers\BaseController;
@@ -40,7 +39,7 @@ class Login extends BaseController
                         'isLoggedIn' => true,
                     ];
                     session()->set($sesion);
-                    return redirect()->to('/dashboard'); // Redirige al dashboard u otra página segura
+                    return redirect()->to('/usuario'); // Redirige al pagina de inicio u otra página segura
                 } else {
                     return redirect()->back()->withInput()->with('error', 'Contraseña incorrecta.');
                 }

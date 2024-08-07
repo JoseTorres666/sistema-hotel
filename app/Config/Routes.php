@@ -28,7 +28,11 @@ $routes->set404Override();
 $routes->setAutoRoute(true);
 
 // Definir rutas específicas
-$routes->get('/', 'Login::index');
+//$routes->get('/', 'Login::index');
+$routes->get('/login', 'Login::index');
+$routes->post('/login/validar', 'Login::validar');
+$routes->get('/logout', 'Login::logout');
+
 
 // Puedes añadir más rutas aquí según tus necesidades
 
