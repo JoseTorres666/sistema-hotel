@@ -36,15 +36,14 @@
         <!-- Responsive examples -->
         <script src="<?php echo base_url(); ?>assets/libs/datatables/dataTables.responsive.min.js"></script>
         <script src="<?php echo base_url(); ?>assets/libs/datatables/responsive.bootstrap4.min.js"></script>
-        
-        <!-- Vendor js -->
-    <script src="<?php echo base_url(); ?>assets/js/vendor.min.js"></script>
-
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <!-- Datatables init -->
         <script src="<?php echo base_url(); ?>assets/js/pages/datatables.init.js"></script>
 
         <!-- App js -->
         <script src="<?php echo base_url(); ?>assets/js/app.min.js"></script>
+        <!-- jQuery -->
+        <script src="<?php echo base_url(); ?>assets/jquery/jquery-3.7.1.min.js"></script>
 
         <!-- script para el modal -->
         <script>
