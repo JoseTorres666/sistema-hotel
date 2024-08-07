@@ -1,3 +1,6 @@
+<?php 
+$user_session = session();
+?>
 <!DOCTYPE html>
 <html lang="en">
 

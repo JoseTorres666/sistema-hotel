@@ -144,4 +144,14 @@ class Usuario extends BaseController
         // Redireccionar con éxito
         return redirect()->to(base_url('usuario/eliminados'))->with('message', 'Usuario restaurado exitosamente');
     }
+    public function editarpassword($id)
+    {
+        $usuario = $this->usuario->find($id);
+        $data['usuario'] = $usuario;
+
+        echo view('template/header');
+        echo view('usuario/editar', $data); // Asumiendo que 'editar' es la vista para editar datos y contraseña
+        echo view('template/footer');
+    }
+    
 }

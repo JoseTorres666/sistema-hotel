@@ -11,17 +11,18 @@ class Login extends BaseController
     public function __construct()
     {
         $this->usuario = new UsuarioModel();
+        
     }
 
     public function index()
     {
         echo view('login');
     }
-
+    
     public function validar()
     {
         $rules = [
-            'email' => 'required|valid_email',
+            'email' => 'required',
             'password' => 'required'
         ];
 
@@ -31,15 +32,19 @@ class Login extends BaseController
 
             $datosusuario = $this->usuario->where('email', $email)->first();
 
-            if ($datosusuario) {
+            if ($datosusuario != null) {
                 if (password_verify($password, $datosusuario['password'])) {
-                    $sesion = [
+                    $datosSesion = [
                         'id' => $datosusuario['id'],
-                        'email' => $datosusuario['email'],
-                        'isLoggedIn' => true,
+                        'nombres' => $datosusuario['nombres'],
+                        'apellido_paterno' => $datosusuario['apellido_paterno'],
+                        'rol' => $datosusuario['rol'],
+                        'isLoggedIn' => true
                     ];
-                    session()->set($sesion);
-                    return redirect()->to('/usuario'); // Redirige al pagina de inicio u otra página segura
+                    $session = session();
+                    $session->set($datosSesion);
+
+                    return redirect()->to('usuario');
                 } else {
                     return redirect()->back()->withInput()->with('error', 'Contraseña incorrecta.');
                 }
@@ -54,6 +59,7 @@ class Login extends BaseController
     public function logout()
     {
         session()->destroy();
-        return redirect()->to('/login');
+        return redirect()->to(base_url());
     }
+    
 }

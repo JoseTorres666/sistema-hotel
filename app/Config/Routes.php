@@ -34,6 +34,8 @@ $routes->post('/login/validar', 'Login::validar');
 $routes->get('/logout', 'Login::logout');
 
 
+
+
 // Puedes añadir más rutas aquí según tus necesidades
 
 /*
