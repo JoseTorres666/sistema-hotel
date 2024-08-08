@@ -1340,3 +1340,82 @@ in APPPATH\Views\template\header.php on line 42.
  9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-07 20:41:43 --> Error: Undefined constant "base_url"
+[Method: GET, Route: usuario]
+in APPPATH\Views\template\header.php on line 42.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('template/header', [], true)
+ 4 APPPATH\Controllers\Usuario.php(26): view('template/header')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Usuario->index()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-07 20:41:56 --> ArgumentCountError: Too few arguments to function App\Controllers\Usuario::editar(), 0 passed in C:\xampp\htdocs\sistema-hotel\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: GET, Route: usuario/editar]
+in APPPATH\Controllers\Usuario.php on line 69.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Usuario->editar()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-07 20:42:39 --> ArgumentCountError: Too few arguments to function App\Controllers\Usuario::editar(), 0 passed in C:\xampp\htdocs\sistema-hotel\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: GET, Route: usuario/editar]
+in APPPATH\Controllers\Usuario.php on line 69.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Usuario->editar()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-07 20:46:14 --> ArgumentCountError: Too few arguments to function App\Controllers\Usuario::editar(), 0 passed in C:\xampp\htdocs\sistema-hotel\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: GET, Route: usuario/editar]
+in APPPATH\Controllers\Usuario.php on line 157.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Usuario->editar()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-07 20:46:20 --> ArgumentCountError: Too few arguments to function App\Controllers\Usuario::editar(), 0 passed in C:\xampp\htdocs\sistema-hotel\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: GET, Route: usuario/editar]
+in APPPATH\Controllers\Usuario.php on line 157.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Usuario->editar()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-07 20:47:26 --> ArgumentCountError: Too few arguments to function App\Controllers\Usuario::editar(), 0 passed in C:\xampp\htdocs\sistema-hotel\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: GET, Route: usuario/editar]
+in APPPATH\Controllers\Usuario.php on line 157.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Usuario->editar()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-07 20:48:28 --> ArgumentCountError: Too few arguments to function App\Controllers\Usuario::editar(), 0 passed in C:\xampp\htdocs\sistema-hotel\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: GET, Route: usuario/editar]
+in APPPATH\Controllers\Usuario.php on line 157.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Usuario->editar()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-07 21:45:39 --> ParseError: syntax error, unexpected token "<", expecting end of file
+[Method: GET, Route: usuario]
+in APPPATH\Views\template\footer.php on line 2.
+ 1 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('template/footer', [], true)
+ 3 APPPATH\Controllers\Usuario.php(28): view('template/footer')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Usuario->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

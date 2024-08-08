@@ -18,7 +18,7 @@ echo '</pre>';*/
     <link href="<?php echo base_url(); ?>assets/libs/datatables/dataTables.bootstrap4.css" rel="stylesheet" type="text/css" />
     <link href="<?php echo base_url(); ?>assets/libs/datatables/buttons.bootstrap4.css" rel="stylesheet" type="text/css" />
     <link href="<?php echo base_url(); ?>assets/libs/datatables/responsive.bootstrap4.css" rel="stylesheet" type="text/css" />
-
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <!-- CSS de la aplicación -->
     <link href="<?php echo base_url(); ?>assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" id="bootstrap-stylesheet" />
     <link href="<?php echo base_url(); ?>assets/css/icons.min.css" rel="stylesheet" type="text/css" />
@@ -28,18 +28,18 @@ echo '</pre>';*/
 </head>
 
 <body>
-    <!-- Inicio de la barra superior -->
+    <!-- Barra superior -->
     <div class="navbar-custom">
         <ul class="list-unstyled topnav-menu float-right mb-0">
             <li class="dropdown notification-list">
                 <a class="nav-link dropdown-toggle" id="userDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <?php echo htmlspecialchars($user_session['nombres'] ?? 'Ningun usuario'); ?>
-                 <?php echo htmlspecialchars($user_session['apellido_paterno'] ?? 'inicio'); ?>
-                 <?php echo htmlspecialchars($user_session['rol'] ?? 'sesion'); ?>
+                    <?php echo htmlspecialchars($user_session['nombres'] ?? 'Ningún usuario'); ?>
+                    <?php echo htmlspecialchars($user_session['apellido_paterno'] ?? ''); ?>
+                    <?php echo htmlspecialchars($user_session['rol'] ?? ''); ?>
                     <i class="fe-settings noti-icon"></i>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-                    <a href="#" class="dropdown-item notify-item">Cambiar contraseña</a>
+                    <a href="<?php echo base_url(); ?>usuario/editarpassword" class="dropdown-item notify-item">Cambiar contraseña</a>
                     <a href="<?php echo base_url(); ?>login/logout" class="dropdown-item notify-item">Cerrar sesión</a>
                 </div>
             </li>
@@ -48,20 +48,16 @@ echo '</pre>';*/
             <a href="index.html" class="logo text-center">
                 <span class="logo-lg">
                     <img src="<?php echo base_url();?>assets/images/logo-light.png" alt="" height="25">
-                    <!-- <span class="logo-lg-text-light">UBold</span> -->
                 </span>
                 <span class="logo-sm">
-                    <!-- <span class="logo-sm-text-dark">U</span> -->
                     <img src="<?php echo base_url();?>assets/images/logo-sm.png" alt="" height="28">
                 </span>
             </a>
         </div>
     </div>
-
-    
     <!-- Fin de la barra superior -->
 
-    <!-- Inicio de la página -->
+    <!-- Página -->
     <div id="wrapper">
         <!-- Barra lateral izquierda -->
         <div class="left-side-menu">
@@ -71,7 +67,7 @@ echo '</pre>';*/
                         <li class="menu-title">Apps</li>
 
                         <li>
-                            <a href="<?php echo base_url(); ?>Usuario">
+                            <a href="<?php echo base_url(); ?>usuario">
                                 <i class="fa-solid fa-user"></i>
                                 <span> Usuarios </span>
                             </a>
@@ -83,8 +79,8 @@ echo '</pre>';*/
                                 <span class="menu-arrow"></span>
                             </a>
                             <ul class="nav-second-level" aria-expanded="false">
-                                <li><a href="<?php echo base_url(); ?>Producto">Productos</a></li>
-                                <li><a href="<?php echo base_url(); ?>Categoria">Categoría</a></li>
+                                <li><a href="<?php echo base_url(); ?>producto">Productos</a></li>
+                                <li><a href="<?php echo base_url(); ?>categoria">Categoría</a></li>
                             </ul>
                         </li>
 
@@ -103,16 +99,12 @@ echo '</pre>';*/
                         </li>
                     </ul>
                 </div>
-                <!-- Fin de la barra lateral -->
-
-                <div class="clearfix"></div>
             </div>
-            <!-- Fin de la barra lateral izquierda -->
         </div>
         <!-- Fin de la barra lateral izquierda -->
 
-        <!-- Inicio del contenido de la página -->
+        <!-- Contenido de la página -->
         <div class="content-page">
             <div class="content">
-                <!-- contenido de la página -->
-                <!-- fin encabezado -->
+                <!-- Contenido de la página -->
+                <!-- Fin del contenido -->

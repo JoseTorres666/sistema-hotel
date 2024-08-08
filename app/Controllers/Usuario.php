@@ -65,7 +65,6 @@ class Usuario extends BaseController
         }    
     }
 
-
     public function editar($id)
     {
         $usuario = $this->usuario->find($id);
@@ -144,14 +143,64 @@ class Usuario extends BaseController
         // Redireccionar con éxito
         return redirect()->to(base_url('usuario/eliminados'))->with('message', 'Usuario restaurado exitosamente');
     }
-    public function editarpassword($id)
+
+    // Función para mostrar el formulario de edición del usuario autenticado
+    public function editarpassword()
     {
+        // Obtiene el ID del usuario desde la sesión
+        $id = session()->get('id');
         $usuario = $this->usuario->find($id);
         $data['usuario'] = $usuario;
 
-        echo view('template/header');
-        echo view('usuario/editar', $data); // Asumiendo que 'editar' es la vista para editar datos y contraseña
+        echo view('template/header'); 
+        echo view('usuario/cambiarpassword', $data);
         echo view('template/footer');
     }
-    
+
+    // Función para actualizar los datos del usuario autenticado
+    public function actualizarpassword()
+    {
+        $rules = [
+            'nombres' => 'required',
+            'apellido_paterno' => 'required'
+        ];
+
+        // Verifica si se está cambiando la contraseña
+        if ($this->request->getPost('password') !== '') {
+            $rules['password'] = 'required';
+            $rules['current_password'] = 'required';
+        }
+
+        if ($this->validate($rules)) {
+            // Obtiene el ID del usuario desde la sesión
+            $id = session()->get('id');
+            $usuario = $this->usuario->find($id);
+
+            // Verifica si la contraseña actual es correcta
+            if ($this->request->getPost('password') !== '' && !password_verify($this->request->getPost('current_password'), $usuario['password'])) {
+                return redirect()->back()->withInput()->with('errors', ['current_password' => 'La contraseña actual es incorrecta.']);
+            }
+
+            $data = [
+                'nombres' => strtoupper($this->request->getPost('nombres')),
+                'apellido_paterno' => strtoupper($this->request->getPost('apellido_paterno')),
+                'apellido_materno' => strtoupper($this->request->getPost('apellido_materno')),
+                'telefono' => $this->request->getPost('telefono')
+            ];
+
+            // Verifica si se está cambiando la contraseña
+            if ($this->request->getPost('password') !== '') {
+                $data['password'] = password_hash($this->request->getPost('password'), PASSWORD_BCRYPT);
+            }
+
+            if ($this->usuario->update($id, $data)) {
+                return redirect()->to(base_url('usuario'))->with('success', 'Usuario actualizado con éxito');
+            } else {
+                return redirect()->back()->withInput()->with('errors', ['update' => 'No se pudo actualizar el usuario.']);
+            }
+        } else {
+            return redirect()->back()->withInput()->with('errors', $this->validator->getErrors());
+        }    
+    }
 }
+

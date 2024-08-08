@@ -1,10 +1,30 @@
-<!-- editar.php -->
+<!-- inicio contenido -->
 <div class="container-fluid">
     <div class="row">
         <div class="card-box table-responsive">
             <h1 class="header-title">Editar Usuario</h1><br>
-            <?php echo form_open('usuario/actualizarpassword'); ?>
+
+            <!-- Mostrar mensajes de error -->
+            <?php if (session()->getFlashdata('errors')) : ?>
+                <div class="alert alert-danger" role="alert">
+                    <?php foreach (session()->getFlashdata('errors') as $error) : ?>
+                        <p><?= $error ?></p>
+                    <?php endforeach; ?>
+                </div>
+            <?php endif; ?>
+
+            <!-- Mostrar mensaje de éxito si lo hay -->
+            <?php if (session()->getFlashdata('success')) : ?>
+                <div class="alert alert-success" role="alert">
+                    <?= session()->getFlashdata('success') ?>
+                </div>
+            <?php endif; ?>
+
+            <?php echo form_open_multipart('usuario/actualizarpassword'); ?>
+            
+            <!-- Campo oculto para el ID del usuario -->
             <input type="hidden" name="id" value="<?php echo $usuario['id']; ?>">
+            
             <div class="form-group">
                 <div class="row">
                     <div class="col-12 col-sm-6">
@@ -23,28 +43,25 @@
                         <label for="telefono">Teléfono</label>
                         <input class="form-control" id="telefono" name="telefono" type="text" value="<?php echo $usuario['telefono']; ?>" required>
                     </div>
-                    <div class="col-12 col-sm-6">
-                        <label for="sueldo">Sueldo</label>
-                        <input class="form-control" id="sueldo" name="sueldo" type="text" value="<?php echo $usuario['sueldo']; ?>" required>
-                    </div>
+                    
                     <div class="col-12 col-sm-6">
                         <label for="rol">Rol</label>
-                        <select class="form-control" id="rol" name="rol" required>
+                        <select class="form-control" id="rol" name="rol" disabled>
                             <option value="administrador" <?php echo ($usuario['rol'] == 'administrador') ? 'selected' : ''; ?>>Administrador</option>
                             <option value="recepcionista" <?php echo ($usuario['rol'] == 'recepcionista') ? 'selected' : ''; ?>>Recepcionista</option>
                         </select>
                     </div>
                     <div class="col-12 col-sm-6">
                         <label for="email">Email</label>
-                        <input class="form-control" id="email" name="email" type="email" value="<?php echo $usuario['email']; ?>" required>
+                        <input class="form-control" id="email" name="email" type="email" value="<?php echo $usuario['email']; ?>" disabled>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <label for="current_password">Contraseña Actual</label>
+                        <input class="form-control" id="current_password" name="current_password" type="password" placeholder="Ingrese su contraseña actual (requerido si desea cambiar la contraseña)">
                     </div>
                     <div class="col-12 col-sm-6">
                         <label for="password">Nueva Contraseña</label>
-                        <input class="form-control" id="password" name="password" type="password">
-                    </div>
-                    <div class="col-12 col-sm-6">
-                        <label for="confirm_password">Confirmar Contraseña</label>
-                        <input class="form-control" id="confirm_password" name="confirm_password" type="password">
+                        <input class="form-control" id="password" name="password" type="password" placeholder="Ingrese una nueva contraseña (opcional)">
                     </div>
                 </div>
             </div>
