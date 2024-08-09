@@ -40,7 +40,7 @@
                           <a href="#" data-href="<?php echo base_url('usuario/integrar/'.$usuario['id']); ?>" 
                             data-toggle="modal" data-target="#modal-confirma" data-placement="top" 
                             title="Reingresar Registro" class="btn btn-purple">
-                            <i class="fa-solid fa-recycle"></i>
+                            <i class="mdi mdi-recycle"style="font-size: 20px"></i>
                           </a>
                         </td>
                     </tr>

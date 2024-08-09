@@ -129,14 +129,14 @@ $user_session = $session_user->get();?>
 
                             <li>
                                 <a href="<?php echo base_url();?>/usuario">
-                                    <i class="fe-calendar"></i>
+                                    <i class="  mdi mdi-account-group"></i>
                                     <span> Usuarios </span>
                                 </a>
                             </li>
 
                             <li>
                                 <a href="<?php echo base_url();?>/producto">
-                                    <i class="fe-life-buoy"></i> 
+                                    <i class=" mdi mdi-cart"></i> 
                                     <span> Productos </span>
                                 </a>
                             </li>

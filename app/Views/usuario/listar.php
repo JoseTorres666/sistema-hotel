@@ -17,8 +17,7 @@
                     <tr>
                         <th>N°</th>
                         <th>Nombres </th>
-                        <th>Apellido Paterno</th>
-                        <th>Apellido Materno</th>
+                        <th>Apellidos</th>
                         <th>Teléfono</th>
                         <th>Sueldo</th>
                         <th>Rol</th>
@@ -35,19 +34,18 @@
                         <td><?php echo $contador; ?></td>
                         <td><?php echo $usuario['nombres']; ?></td>
                         <td><?php echo $usuario['apellido_paterno']; ?></td>
-                        <td><?php echo $usuario['apellido_materno']; ?></td>
                         <td><?php echo $usuario['telefono']; ?></td>
                         <td><?php echo $usuario['sueldo']; ?></td>
                         <td><?php echo $usuario['rol']; ?></td>
                         <td><?php echo $usuario['email']; ?></td>
                         <td>
-                            <a href="<?php echo base_url('usuario/editar/'.$usuario['id']); ?>" class="btn btn-warning"><i class="fa-solid fa-pencil"></i></a>
+                            <a href="<?php echo base_url('usuario/editar/'.$usuario['id']); ?>" class="btn btn-warning"><i class=" mdi mdi-eyedropper" style="font-size: 20px;"></i></a>
                         </td>
                         <td>
                           <a href="#" data-href="<?php echo base_url('usuario/eliminarbd/'.$usuario['id']); ?>" 
                             data-toggle="modal" data-target="#modal-confirma" data-placement="top" 
                             title="Eliminar Registro" class="btn btn-danger">
-                            <i class="fa-solid fa-trash"></i>
+                            <i class="mdi mdi-delete" style="font-size: 20px;"></i>
                           </a>
                         </td>
 
