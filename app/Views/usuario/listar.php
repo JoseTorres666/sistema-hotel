@@ -59,22 +59,21 @@
     </div><!-- end row -->
 </div> <!-- end container-fluid -->
 <!-- fin contenido -->
-<div class="modal fade" id="modal-confirma" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+<div class="modal fade bs-example-modal-center" id="modal-confirma" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLongTitle">Eliminar Usuario</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <h4 class="modal-title mt-0">Eliminar Usuario</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
                 <p>¿Estás seguro de eliminar este Usuario?</p>
-            </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
                 <a class="btn btn-primary btn-ok" href="#">Sí</a>
             </div>
         </div>
-    </div>
-</div>
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
