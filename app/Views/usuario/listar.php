@@ -17,7 +17,8 @@
                     <tr>
                         <th>N°</th>
                         <th>Nombres </th>
-                        <th>Apellidos</th>
+                        <th>Apellido Paterno</th>
+                        <th>Apellido Materno</th>
                         <th>Teléfono</th>
                         <th>Sueldo</th>
                         <th>Rol</th>
@@ -34,6 +35,7 @@
                         <td><?php echo $contador; ?></td>
                         <td><?php echo $usuario['nombres']; ?></td>
                         <td><?php echo $usuario['apellido_paterno']; ?></td>
+                        <td><?php echo $usuario['apellido_materno']; ?></td>
                         <td><?php echo $usuario['telefono']; ?></td>
                         <td><?php echo $usuario['sueldo']; ?></td>
                         <td><?php echo $usuario['rol']; ?></td>

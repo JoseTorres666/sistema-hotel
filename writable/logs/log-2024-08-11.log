@@ -1,0 +1,40 @@
+CRITICAL - 2024-08-11 13:46:38 --> ErrorException: Trying to access array offset on value of type null
+[Method: GET, Route: usuario/editarpassword]
+in APPPATH\Views\usuario\cambiarpassword.php on line 26.
+ 1 APPPATH\Views\usuario\cambiarpassword.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\sistema-hotel\\app\\Views\\usuario\\cambiarpassword.php', 26)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\sistema-hotel\\app\\Views\\usuario\\cambiarpassword.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('usuario/cambiarpassword', [], true)
+ 5 APPPATH\Controllers\Usuario.php(156): view('usuario/cambiarpassword', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Usuario->editarpassword()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-11 13:46:51 --> ErrorException: Trying to access array offset on value of type null
+[Method: GET, Route: usuario/editarpassword]
+in APPPATH\Views\usuario\cambiarpassword.php on line 26.
+ 1 APPPATH\Views\usuario\cambiarpassword.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\sistema-hotel\\app\\Views\\usuario\\cambiarpassword.php', 26)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\sistema-hotel\\app\\Views\\usuario\\cambiarpassword.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('usuario/cambiarpassword', [], true)
+ 5 APPPATH\Controllers\Usuario.php(156): view('usuario/cambiarpassword', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Usuario->editarpassword()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-11 13:52:55 --> ParseError: syntax error, unexpected identifier "apellido_paterno", expecting "]"
+[Method: GET, Route: usuario]
+in APPPATH\Views\usuario\listar.php on line 38.
+ 1 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('usuario/listar', [], true)
+ 3 APPPATH\Controllers\Usuario.php(27): view('usuario/listar', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Usuario->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
