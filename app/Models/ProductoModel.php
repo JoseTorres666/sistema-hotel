@@ -11,7 +11,6 @@ class ProductoModel extends Model
 
     protected $allowedFields = 
     [
-        'nombre', 'descripcion', 'precio_compra','stock', 'estado','id_usuario'
+        'nombre', 'descripcion', 'precio_compra', 'precio_venta', 'stock', 'estado','imagen', 'id_usuario'
     ];
-
 }

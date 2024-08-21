@@ -7,24 +7,24 @@
             <div class="form-group">
                 <div class="row">
                     <div class="col-12 col-sm-6">
-                        <label for="foto">Subir foto</label>
-                        <input type="file" name="foto" id="foto">
-                    </div>    
-                    <div class="col-12 col-sm-6">
-                        <label for="nombres">Nombres</label>
-                        <input class="form-control" id="nombres" name="nombres" type="text" required>
+                        <label for="nombre">Nombre</label>
+                        <input class="form-control" id="nombre" name="nombre" type="text" required>
                     </div>
                     <div class="col-12 col-sm-6">
-                        <label for="descripcion">Descripcion</label>
+                        <label for="descripcion">Descripción</label>
                         <input class="form-control" id="descripcion" name="descripcion" type="text" required>
                     </div>
                     <div class="col-12 col-sm-6">
-                        <label for="precio_compra">Precio de compra</label>
-                        <input class="form-control" id="precio_compra" name="precio_compra" type="text">
+                        <label for="precio_compra">Precio de Compra</label>
+                        <input class="form-control" id="precio_compra" name="precio_compra" type="text" required>
                     </div>
                     <div class="col-12 col-sm-6">
                         <label for="stock">Stock</label>
                         <input class="form-control" id="stock" name="stock" type="text" required>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <label for="imagen">Subir Imagen</label>
+                        <input class="form-control-file" id="imagen" name="imagen" type="file" required>
                     </div>
                 </div>
             </div>

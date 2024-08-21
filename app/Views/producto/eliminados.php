@@ -16,11 +16,11 @@
                     <!-- el id="datatable-buttons" es para la descarga del archivo js -->
                     <tr>
                         <th>N°</th>
+                        <th>Imagen</th>
                         <th>Nombre</th>
-                        <th>Categoría</th>
-                        <th>Precio de Venta</th>
+                        <th>Descripcion</th>
                         <th>Precio de Compra</th>
-                        <th>Stock disponible</th>
+                        <th>Stock</th>
                         <th>Reintegrar</th>
                     </tr>
                 </thead>
@@ -30,17 +30,27 @@
                     foreach ($productos as $producto) { ?>
                     <tr>
                         <td><?php echo $contador; ?></td>
+                        <td>
+                          <?php
+                          $imagen = $producto['imagen'];
+                          if (empty($imagen)) { ?>
+                              <img src="<?php echo base_url();?>/imagen/producto/producto.png" style="width: 50px;">
+                          <?php
+                          } else { ?>
+                              <img src="<?php echo base_url();?>/imagen/producto/<?php echo $imagen; ?>" style="width: 50px;">
+                          <?php
+                          } ?>
+                        </td>
                         <td><?php echo $producto['nombre']; ?></td>
-                        <td><?php echo $producto['categoria_nombre']; ?></td>
-                        <td><?php echo $producto['precio_venta']; ?></td>
+                        <td><?php echo $producto['descripcion']; ?></td>
                         <td><?php echo $producto['precio_compra']; ?></td>
                         <td><?php echo $producto['stock']; ?></td>
                         <td>
-                            <a href="#" data-href="<?php echo base_url('producto/integrar/'.$producto['id']); ?>" 
-                               data-toggle="modal" data-target="#modal-confirma" data-placement="top" 
-                               title="Reintegrar Producto" class="btn btn-primary">
-                               <i class="fa-solid fa-recycle"></i>
-                            </a>
+                          <a href="#" data-href="<?php echo base_url('producto/integrar/'.$producto['id']); ?>" 
+                            data-toggle="modal" data-target="#modal-confirma" data-placement="top" 
+                            title="Reingresar Registro" class="btn btn-purple">
+                            <i class="mdi mdi-recycle"style="font-size: 20px"></i>
+                          </a>
                         </td>
                     </tr>
                     <?php

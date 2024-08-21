@@ -50,12 +50,16 @@
                         <td><?php echo $producto['precio_compra']; ?></td>
                         <td><?php echo $producto['stock']; ?></td>
                         <td>
-                            <a href="<?php echo base_url('producto/editar/'.$producto['id']); ?>" class="btn btn-warning"><i class="fa-solid fa-pencil"></i></a>
+                            <a href="<?php echo base_url('producto/editar/'.$producto['id']); ?>" class="btn btn-warning">
+                              <i class=" mdi mdi-eyedropper" style="font-size: 20px;"></i>
+                            </a>
                         </td>
                         <td>
-                            <a href="#" data-href="<?php echo base_url('producto/eliminarbd/'.$producto['id']); ?>" 
+                          <a href="#" data-href="<?php echo base_url('producto/eliminarbd/'.$producto['id']); ?>" 
                             data-toggle="modal" data-target="#modal-confirma" data-placement="top" 
-                            title="Eliminar Registro" class="btn btn-danger btn-delete"><i class="fa-solid fa-trash"></i></a>
+                            title="Eliminar Registro" class="btn btn-danger btn-delete">
+                            <i class="mdi mdi-delete" style="font-size: 20px;"></i>
+                          </a>
                         </td>
                     </tr>
                     <?php
