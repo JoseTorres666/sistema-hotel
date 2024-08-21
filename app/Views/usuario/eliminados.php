@@ -17,7 +17,6 @@
                         <th>Apellido Paterno</th>
                         <th>Apellido Materno</th>
                         <th>Teléfono</th>
-                        <th>Sueldo</th>
                         <th>Rol</th>
                         <th>Email</th>
                         <th>Integrar</th>
@@ -33,7 +32,6 @@
                         <td><?php echo $usuario['apellido_paterno']; ?></td>
                         <td><?php echo $usuario['apellido_materno']; ?></td>
                         <td><?php echo $usuario['telefono']; ?></td>
-                        <td><?php echo $usuario['sueldo']; ?></td>
                         <td><?php echo $usuario['rol']; ?></td>
                         <td><?php echo $usuario['email']; ?></td>
                         <td>

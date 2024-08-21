@@ -23,10 +23,6 @@
                         <input class="form-control" id="telefono" name="telefono" type="text" required>
                     </div>
                     <div class="col-12 col-sm-6">
-                        <label for="sueldo">Sueldo</label>
-                        <input class="form-control" id="sueldo" name="sueldo" type="text" required>
-                    </div>
-                    <div class="col-12 col-sm-6">
                         <label for="rol">Rol</label>
                         <select class="form-control" id="rol" name="rol" required>
                             <option value="administrador">Administrador</option>

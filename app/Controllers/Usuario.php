@@ -42,7 +42,6 @@ class Usuario extends BaseController
             'nombres' => 'required',
             'apellido_paterno' => 'required',
             'telefono' => 'required',
-            'sueldo' => 'required',
             'rol' => 'required',
             'email' => 'required',
             'password' => 'required',
@@ -53,7 +52,6 @@ class Usuario extends BaseController
                 'apellido_paterno' => strtoupper($this->request->getPost('apellido_paterno')),
                 'apellido_materno' => strtoupper($this->request->getPost('apellido_materno')),
                 'telefono' => $this->request->getPost('telefono'),
-                'sueldo' => $this->request->getPost('sueldo'),
                 'rol' => strtoupper($this->request->getPost('rol')),
                 'email' => $this->request->getPost('email'),
                 'password' => password_hash($this->request->getPost('password'), PASSWORD_DEFAULT)
@@ -81,7 +79,6 @@ class Usuario extends BaseController
             'nombres' => 'required',
             'apellido_paterno' => 'required',
             'telefono' => 'required',
-            'sueldo' => 'required',
             'rol' => 'required',
             'email' => 'required'
         ];
@@ -94,7 +91,6 @@ class Usuario extends BaseController
                 'apellido_paterno' => strtoupper($this->request->getPost('apellido_paterno')),
                 'apellido_materno' => strtoupper($this->request->getPost('apellido_materno')),
                 'telefono' => $this->request->getPost('telefono'),
-                'sueldo' => $this->request->getPost('sueldo'),
                 'rol' => strtoupper($this->request->getPost('rol')),
                 'email' => $this->request->getPost('email')
             ];
