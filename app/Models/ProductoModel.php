@@ -9,7 +9,7 @@ class ProductoModel extends Model
     protected $table = 'producto';
     protected $primaryKey = 'id';
 
-    protected $allowedFields = ['id_categoria','nombre', 'precio_venta', 'precio_compra','stock', 'estado'];
+    protected $allowedFields = ['id_estancia','nombre', 'descripcion', 'precio_compra','stock', 'estado'];
 
     protected $useTimestamps = true;
     protected $createdField  = 'fecha_registro';
