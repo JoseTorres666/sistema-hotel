@@ -25,7 +25,11 @@
                     </div>
                     <div class="col-12 col-sm-6">
                         <label for="rol">Rol</label>
-                        <input class="form-control" id="rol" name="rol" type="text" value="<?php echo $usuario['rol']; ?>" required>
+                        <select class="form-control" id="rol" name="rol" required>
+                            <option value="">Editar Rol...</option>
+                            <option value="administrador">Administrador</option>
+                            <option value="recepcionista">Recepcionista</option>
+                        </select>
                     </div>
                     <div class="col-12 col-sm-6">
                         <label for="email">Email</label>

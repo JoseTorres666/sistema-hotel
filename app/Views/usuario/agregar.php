@@ -25,6 +25,7 @@
                     <div class="col-12 col-sm-6">
                         <label for="rol">Rol</label>
                         <select class="form-control" id="rol" name="rol" required>
+                            <option value="">Elige un Rol...</option>
                             <option value="administrador">Administrador</option>
                             <option value="recepcionista">Recepcionista</option>
                         </select>

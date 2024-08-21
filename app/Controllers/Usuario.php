@@ -11,7 +11,8 @@ class Usuario extends BaseController
 
     public function __construct()
     {
-        $this->usuario = new UsuarioModel();
+        $this->usuarioModel = new UsuarioModel();
+        
     }
 
     public function index()
@@ -20,7 +21,7 @@ class Usuario extends BaseController
             return redirect()->to('login');
         }*/
 
-        $usuarios = $this->usuario->where('estado', 1)->findAll();
+        $usuarios = $this->usuarioModel->where('estado', 1)->findAll();
         $data['usuarios'] = $usuarios;
         
         echo view('template/header'); 
@@ -56,7 +57,7 @@ class Usuario extends BaseController
                 'email' => $this->request->getPost('email'),
                 'password' => password_hash($this->request->getPost('password'), PASSWORD_DEFAULT)
             ];
-            $this->usuario->save($data);
+            $this->usuarioModel->save($data);
             return redirect()->to(base_url('usuario'))->with('success', 'usuario agregado con éxito');
         } else {
             return redirect()->back()->withInput()->with('errors', $this->validator->getErrors());
@@ -65,7 +66,7 @@ class Usuario extends BaseController
 
     public function editar($id)
     {
-        $usuario = $this->usuario->find($id);
+        $usuario = $this->usuarioModel->find($id);
         $data['usuario'] = $usuario; // Cambiado 'usuarios' a 'usuario' para mayor claridad
 
         echo view('template/header'); 
@@ -101,7 +102,7 @@ class Usuario extends BaseController
             }
 
             // Depuración
-            if ($this->usuario->update($id, $data)) {
+            if ($this->usuarioModel->update($id, $data)) {
                 return redirect()->to(base_url('usuario'))->with('success', 'Usuario actualizado con éxito');
             } else {
                 return redirect()->back()->withInput()->with('errors', ['update' => 'No se pudo actualizar el usuario.']);
@@ -115,7 +116,7 @@ class Usuario extends BaseController
     public function eliminarbd($id)
     {
         // Borrado lógico
-        $this->usuario->update($id, ['estado' => 0]);
+        $this->usuarioModel->update($id, ['estado' => 0]);
 
         // Redireccionar con éxito
         return redirect()->to(base_url('usuario'))->with('message', 'Usuario eliminado exitosamente');
@@ -123,7 +124,7 @@ class Usuario extends BaseController
 
     public function eliminados()
     {
-        $usuarios = $this->usuario->where('estado', 0)->findAll();
+        $usuarios = $this->usuarioModel->where('estado', 0)->findAll();
         $data['usuarios'] = $usuarios;
         
         echo view('template/header'); 
@@ -134,7 +135,7 @@ class Usuario extends BaseController
     public function integrar($id)
     {
         // Restaurar usuario
-        $this->usuario->update($id, ['estado' => 1]);
+        $this->usuarioModel->update($id, ['estado' => 1]);
 
         // Redireccionar con éxito
         return redirect()->to(base_url('usuario/eliminados'))->with('message', 'Usuario restaurado exitosamente');
@@ -145,7 +146,7 @@ class Usuario extends BaseController
     {
         // Obtiene el ID del usuario desde la sesión
         $id = session()->get('id');
-        $usuario = $this->usuario->find($id);
+        $usuario = $this->usuarioModel->find($id);
         $data['usuario'] = $usuario;
 
         echo view('template/header'); 
@@ -170,7 +171,7 @@ class Usuario extends BaseController
         if ($this->validate($rules)) {
             // Obtiene el ID del usuario desde la sesión
             $id = session()->get('id');
-            $usuario = $this->usuario->find($id);
+            $usuario = $this->usuarioModel->find($id);
 
             // Verifica si la contraseña actual es correcta
             if ($this->request->getPost('password') !== '' && !password_verify($this->request->getPost('current_password'), $usuario['password'])) {
@@ -189,7 +190,7 @@ class Usuario extends BaseController
                 $data['password'] = password_hash($this->request->getPost('password'), PASSWORD_BCRYPT);
             }
 
-            if ($this->usuario->update($id, $data)) {
+            if ($this->usuarioModel->update($id, $data)) {
                 return redirect()->to(base_url('usuario'))->with('success', 'Usuario actualizado con éxito');
             } else {
                 return redirect()->back()->withInput()->with('errors', ['update' => 'No se pudo actualizar el usuario.']);

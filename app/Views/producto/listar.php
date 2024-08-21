@@ -19,11 +19,11 @@
                     <!-- el id="datatable-buttons" es para la descarga del archivo js -->
                     <tr>
                         <th>N°</th>
+                        <th>Imagen</th>
                         <th>Nombre</th>
-                        <th>Categoría</th>
-                        <th>Precio de Venta</th>
+                        <th>Descripcion</th>
                         <th>Precio de Compra</th>
-                        <th>Stock disponible</th>
+                        <th>Stock</th>
                         <th>Modificar</th>
                         <th>Eliminar</th>
                     </tr>
@@ -34,18 +34,28 @@
                     foreach ($productos as $producto) { ?>
                     <tr>
                         <td><?php echo $contador; ?></td>
+                        <td>
+                          <?php
+                          $imagen = $producto['imagen'];
+                          if (empty($imagen)) { ?>
+                              <img src="<?php echo base_url();?>/imagen/producto/producto.png" style="width: 50px;">
+                          <?php
+                          } else { ?>
+                              <img src="<?php echo base_url();?>/imagen/producto/<?php echo $imagen; ?>" style="width: 50px;">
+                          <?php
+                          } ?>
+                        </td>
                         <td><?php echo $producto['nombre']; ?></td>
-                        <td><?php echo $producto['categoria_nombre']; ?></td>
-                        <td><?php echo $producto['precio_venta']; ?></td>
+                        <td><?php echo $producto['descripcion']; ?></td>
                         <td><?php echo $producto['precio_compra']; ?></td>
                         <td><?php echo $producto['stock']; ?></td>
                         <td>
-                            <a href="<?php echo base_url('producto/editar/'.$producto['id']); ?>" class="btn btn-warning"><i class="fa-solid fa-pencil"></i></i></a>
+                            <a href="<?php echo base_url('producto/editar/'.$producto['id']); ?>" class="btn btn-warning"><i class="fa-solid fa-pencil"></i></a>
                         </td>
                         <td>
                             <a href="#" data-href="<?php echo base_url('producto/eliminarbd/'.$producto['id']); ?>" 
                             data-toggle="modal" data-target="#modal-confirma" data-placement="top" 
-                            title="Eliminar Registro" class="btn btn-danger"><i class="fa-solid fa-trash"></i></a>
+                            title="Eliminar Registro" class="btn btn-danger btn-delete"><i class="fa-solid fa-trash"></i></a>
                         </td>
                     </tr>
                     <?php
