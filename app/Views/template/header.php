@@ -17,6 +17,7 @@ $user_session = $session_user->get();?>
         <link href="<?php echo base_url();?>/assets/libs/datatables/dataTables.bootstrap4.css" rel="stylesheet" type="text/css" />
         <link href="<?php echo base_url();?>/assets/libs/datatables/buttons.bootstrap4.css" rel="stylesheet" type="text/css" />
         <link href="<?php echo base_url();?>/assets/libs/datatables/responsive.bootstrap4.css" rel="stylesheet" type="text/css" />
+        <link href="<?php echo base_url();?>/assets/css/app.min.css" rel="stylesheet" type="text/css" id="app-stylesheet" />
 
         <!-- App css -->
         <link href="<?php echo base_url();?>/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" id="bootstrap-stylesheet" />
@@ -129,29 +130,29 @@ $user_session = $session_user->get();?>
 
                             <li>
                                 <a href="<?php echo base_url();?>/usuario">
-                                    <i class="  mdi mdi-account-group"></i>
+                                    <i class="  mdi mdi-account-group"style="font-size: 30px;"></i>
                                     <span> Usuarios </span>
                                 </a>
                             </li>
 
                             <li>
                                 <a href="<?php echo base_url();?>/producto">
-                                    <i class=" mdi mdi-cart"></i> 
+                                    <i class=" mdi mdi-cart"style="font-size: 30px;"></i> 
                                     <span> Productos </span>
                                 </a>
                             </li>
 
                             <li>
                             <a href="<?php echo base_url();?>/huesped">
-                                    <i class="fe-file-text"></i> 
+                                <i class="mdi mdi-account-tie" style="font-size: 30px;"></i>
                                     <span>huesped</span>
                                 </a>
                             </li>
 
                             <li>
-                                <a href="todo.html">
-                                    <i class="fe-layers"></i>
-                                    <span> Todo </span>
+                                <a href="<?php echo base_url();?>/habitacion">
+                                    <i class="mdi mdi-bed-empty" style="font-size: 30px;"></i>
+                                    <span>Habitaciones</span>
                                 </a>
                             </li>
                 

@@ -1261,3 +1261,98 @@ in APPPATH\Views\huesped\listar.php on line 42.
  9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-22 20:51:00 --> ErrorException: Undefined array key "estado_civil"
+[Method: GET, Route: huesped]
+in APPPATH\Views\huesped\listar.php on line 42.
+ 1 APPPATH\Views\huesped\listar.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "estado_civil"', 'C:\\xampp\\htdocs\\sistema-hotel\\app\\Views\\huesped\\listar.php', 42)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\sistema-hotel\\app\\Views\\huesped\\listar.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('huesped/listar', [], true)
+ 5 APPPATH\Controllers\Huesped.php(24): view('huesped/listar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Huesped->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Huesped))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-22 21:08:25 --> ErrorException: Undefined array key "estado_civil"
+[Method: GET, Route: huesped]
+in APPPATH\Views\huesped\listar.php on line 42.
+ 1 APPPATH\Views\huesped\listar.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "estado_civil"', 'C:\\xampp\\htdocs\\sistema-hotel\\app\\Views\\huesped\\listar.php', 42)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\sistema-hotel\\app\\Views\\huesped\\listar.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('huesped/listar', [], true)
+ 5 APPPATH\Controllers\Huesped.php(24): view('huesped/listar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Huesped->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Huesped))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-22 21:10:36 --> ErrorException: Undefined array key "estado_civil"
+[Method: GET, Route: huesped]
+in APPPATH\Views\huesped\listar.php on line 42.
+ 1 APPPATH\Views\huesped\listar.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "estado_civil"', 'C:\\xampp\\htdocs\\sistema-hotel\\app\\Views\\huesped\\listar.php', 42)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\sistema-hotel\\app\\Views\\huesped\\listar.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('huesped/listar', [], true)
+ 5 APPPATH\Controllers\Huesped.php(24): view('huesped/listar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Huesped->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Huesped))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-22 21:13:35 --> ErrorException: Undefined array key "estado_civil"
+[Method: GET, Route: huesped]
+in APPPATH\Views\huesped\listar.php on line 42.
+ 1 APPPATH\Views\huesped\listar.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "estado_civil"', 'C:\\xampp\\htdocs\\sistema-hotel\\app\\Views\\huesped\\listar.php', 42)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\sistema-hotel\\app\\Views\\huesped\\listar.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('huesped/listar', [], true)
+ 5 APPPATH\Controllers\Huesped.php(24): view('huesped/listar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Huesped->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Huesped))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-22 21:34:48 --> ParseError: syntax error, unexpected token "*", expecting "function" or "const"
+[Method: GET, Route: huesped/agregar]
+in APPPATH\Controllers\Huesped.php on line 120.
+ 1 SYSTEMPATH\Router\Router.php(563): CodeIgniter\Router\AutoRouter->getRoute('huesped/agregar', 'GET')
+ 2 SYSTEMPATH\Router\Router.php(228): CodeIgniter\Router\Router->autoRoute('huesped/agregar')
+ 3 SYSTEMPATH\CodeIgniter.php(834): CodeIgniter\Router\Router->handle('huesped/agregar')
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-22 21:46:12 --> ErrorException: Undefined variable $usuario
+[Method: GET, Route: huesped/editar/5]
+in APPPATH\Views\huesped\editar.php on line 7.
+ 1 APPPATH\Views\huesped\editar.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\sistema-hotel\\app\\Views\\huesped\\editar.php', 7)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\sistema-hotel\\app\\Views\\huesped\\editar.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('huesped/editar', [], true)
+ 5 APPPATH\Controllers\Huesped.php(64): view('huesped/editar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Huesped->editar('5')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Huesped))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-22 21:48:26 --> ErrorException: Undefined array key "id_huesped"
+[Method: GET, Route: huesped/editar/5]
+in APPPATH\Views\huesped\editar.php on line 8.
+ 1 APPPATH\Views\huesped\editar.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_huesped"', 'C:\\xampp\\htdocs\\sistema-hotel\\app\\Views\\huesped\\editar.php', 8)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\sistema-hotel\\app\\Views\\huesped\\editar.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('huesped/editar', [], true)
+ 5 APPPATH\Controllers\Huesped.php(64): view('huesped/editar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Huesped->editar('5')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Huesped))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

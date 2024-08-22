@@ -16,11 +16,21 @@ class HuespedModel extends Model
 
     public function getHuespedesConEdad()
     {
-        $builder = $this->db->table($this->table);
-        $builder->select('id, nombres, apellidos, nacionalidad, fecha_nacimiento, TIMESTAMPDIFF(YEAR, fecha_nacimiento, CURDATE()) AS edad','estado_civil', 'profesion', 'tipo_documento', 'numero_documento', 
-        'procedencia');
-        $builder->where('estado', 1);
-        $query = $builder->get();
-        return $query->getResultArray();
+        $huespedes = $this->findAll();
+
+        foreach ($huespedes as &$huesped) {
+            $huesped['edad'] = $this->calcularEdad($huesped['fecha_nacimiento']);
+        }
+
+        return $huespedes;
+    }
+
+    private function calcularEdad($fecha_nacimiento)
+    {
+        $fecha_nacimiento = new \DateTime($fecha_nacimiento);
+        $hoy = new \DateTime();
+        $edad = $hoy->diff($fecha_nacimiento)->y;
+
+        return $edad;
     }
 }

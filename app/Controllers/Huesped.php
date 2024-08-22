@@ -25,10 +25,7 @@ class Huesped extends BaseController
         echo view('template/footer');
     }
 
-
-
-
-    /*public function agregar()
+    public function agregar()
     {
         echo view('template/header'); 
         echo view('huesped/agregar');
@@ -37,30 +34,31 @@ class Huesped extends BaseController
 
     public function agregarbd()
     {
-        // Datos de huesped transformados a mayúsculas
-        $usuarioData = [
+        // Datos del huésped transformados a mayúsculas
+        $huespedData = [
             'nombres' => strtoupper($this->request->getPost('nombres')),
-            'apellido_paterno' => strtoupper($this->request->getPost('apellido_paterno')),
-            'apellido_materno' => strtoupper($this->request->getPost('apellido_materno')),
-            'telefono' => $this->request->getPost('telefono'),
-            'sueldo' => $this->request->getPost('sueldo'),
-            'rol' => strtoupper($this->request->getPost('rol')),
-            'email' => $this->request->getPost('email'),
-            'password' => password_hash($this->request->getPost('password'), PASSWORD_DEFAULT) // Asegurando la contraseña
+            'apellidos' => strtoupper($this->request->getPost('apellidos')),
+            'nacionalidad' => strtoupper($this->request->getPost('nacionalidad')),
+            'fecha_nacimiento' => $this->request->getPost('fecha_nacimiento'),
+            'estado_civil' => strtoupper($this->request->getPost('estado_civil')),
+            'profesion' => strtoupper($this->request->getPost('profesion')),
+            'tipo_documento' => strtoupper($this->request->getPost('tipo_documento')),
+            'numero_documento' => $this->request->getPost('numero_documento'),
+            'procedencia' => strtoupper($this->request->getPost('procedencia')),
         ];
 
-        // Guardar huesped
-        $this->huespedModel->save($usuarioData);
+        // Guardar huésped
+        $this->huespedModel->save($huespedData);
 
         // Redireccionar con éxito
         return redirect()->to(base_url('huesped'));
     }
 
-
     public function editar($id)
     {
+        // Encontrar el huésped por ID
         $huesped = $this->huespedModel->find($id);
-        $data['huesped'] = $huesped; // Cambiado 'huesped' a 'huesped' para mayor claridad
+        $data['huesped'] = $huesped; // Mantén la clave como 'huesped'
 
         echo view('template/header'); 
         echo view('huesped/editar', $data);
@@ -69,28 +67,28 @@ class Huesped extends BaseController
 
     public function actualizarbd()
     {
-        // Obtener el ID del huesped
-        $idusuario = $this->request->getPost('idusuario');
+        // Obtener el ID del huésped
+        $idHuesped = $this->request->getPost('id');
 
-        // Datos de huesped transformados a mayúsculas
-        $usuarioData = [
+        // Datos del huésped transformados a mayúsculas
+        $huespedData = [
             'nombres' => strtoupper($this->request->getPost('nombres')),
-            'apellido_paterno' => strtoupper($this->request->getPost('apellido_paterno')),
-            'apellido_materno' => strtoupper($this->request->getPost('apellido_materno')),
-            'telefono' => $this->request->getPost('telefono'),
-            'sueldo' => $this->request->getPost('sueldo'),
-            'rol' => strtoupper($this->request->getPost('rol')),
-            'email' => $this->request->getPost('email'),
-            'password' => password_hash($this->request->getPost('password'), PASSWORD_DEFAULT) // Asegurando la contraseña
+            'apellidos' => strtoupper($this->request->getPost('apellidos')),
+            'nacionalidad' => strtoupper($this->request->getPost('nacionalidad')),
+            'fecha_nacimiento' => $this->request->getPost('fecha_nacimiento'),
+            'estado_civil' => strtoupper($this->request->getPost('estado_civil')),
+            'profesion' => strtoupper($this->request->getPost('profesion')),
+            'tipo_documento' => strtoupper($this->request->getPost('tipo_documento')),
+            'numero_documento' => $this->request->getPost('numero_documento'),
+            'procedencia' => strtoupper($this->request->getPost('procedencia')),
         ];
 
-        // Actualizar huesped
-        $this->huespedModel->update($idusuario, $usuarioData);
+        // Actualizar huésped
+        $this->huespedModel->update($idHuesped, $huespedData);
 
         // Redireccionar con éxito
         return redirect()->to(base_url('huesped'));
     }
-
 
     public function eliminarbd($id)
     {
@@ -98,13 +96,14 @@ class Huesped extends BaseController
         $this->huespedModel->update($id, ['estado' => 0]);
 
         // Redireccionar con éxito
-        return redirect()->to(base_url('huesped'))->with('message', 'huesped eliminado exitosamente');
+        return redirect()->to(base_url('huesped'))->with('message', 'Huésped eliminado exitosamente');
     }
 
     public function eliminados()
     {
-        $huesped = $this->huespedModel->where('estado', 0)->findAll();
-        $data['huesped'] = $huesped;
+        // Obtener los huéspedes eliminados
+        $huespedes = $this->huespedModel->where('estado', 0)->findAll();
+        $data['huespedes'] = $huespedes;
         
         echo view('template/header'); 
         echo view('huesped/eliminados', $data);
@@ -113,10 +112,11 @@ class Huesped extends BaseController
 
     public function integrar($id)
     {
-        // Restaurar huesped
+        // Restaurar huésped
         $this->huespedModel->update($id, ['estado' => 1]);
 
         // Redireccionar con éxito
-        return redirect()->to(base_url('huesped/eliminados'))->with('message', 'huesped restaurado exitosamente');
-    }*/
+        return redirect()->to(base_url('huesped/eliminados'))->with('message', 'Huésped restaurado exitosamente');
+    }
+
 }

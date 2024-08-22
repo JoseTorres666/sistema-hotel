@@ -2,8 +2,8 @@
 <div class="container-fluid">
     <div class="row">
         <div class="card-box table-responsive">
-            <h1 class="header-title">Agregar Usuario</h1><br>
-            <?php echo form_open_multipart('usuario/agregarbd'); ?>
+            <h1 class="header-title">Agregar Huésped</h1><br>
+            <?php echo form_open_multipart('huesped/agregarbd'); ?>
             <div class="form-group">
                 <div class="row">
                     <div class="col-12 col-sm-6">
@@ -11,41 +11,56 @@
                         <input class="form-control" id="nombres" name="nombres" type="text" required>
                     </div>
                     <div class="col-12 col-sm-6">
-                        <label for="apellido_paterno">Apellido Paterno</label>
-                        <input class="form-control" id="apellido_paterno" name="apellido_paterno" type="text" required>
+                        <label for="apellidos">Apellidos</label>
+                        <input class="form-control" id="apellidos" name="apellidos" type="text" required>
                     </div>
                     <div class="col-12 col-sm-6">
-                        <label for="apellido_materno">Apellido Materno</label>
-                        <input class="form-control" id="apellido_materno" name="apellido_materno" type="text" required>
+                        <label for="nacionalidad">Nacionalidad</label>
+                        <input class="form-control" id="nacionalidad" name="nacionalidad" type="text" required>
                     </div>
                     <div class="col-12 col-sm-6">
-                        <label for="telefono">Teléfono</label>
-                        <input class="form-control" id="telefono" name="telefono" type="text" required>
+                        <label for="fecha_nacimiento">Fecha de Nacimiento</label>
+                        <input class="form-control" id="fecha_nacimiento" name="fecha_nacimiento" type="date" required>
                     </div>
                     <div class="col-12 col-sm-6">
-                        <label for="sueldo">Sueldo</label>
-                        <input class="form-control" id="sueldo" name="sueldo" type="text" required>
-                    </div>
-                    <div class="col-12 col-sm-6">
-                        <label for="rol">Rol</label>
-                        <select class="form-control" id="rol" name="rol" required>
-                            <option value="administrador">Administrador</option>
-                            <option value="recepcionista">Recepcionista</option>
+                        <label for="estado_civil">Estado Civil</label>
+                        <select class="form-control" id="estado_civil" name="estado_civil" required>
+                            <option value="soltero">Soltero</option>
+                            <option value="casado">Casado</option>
+                            <option value="viudo">Viudo</option>
+                            <option value="divorciado">Divorciado</option>
                         </select>
                     </div>
                     <div class="col-12 col-sm-6">
-                        <label for="email">Email</label>
-                        <input class="form-control" id="email" name="email" type="email" required>
+                        <label for="profesion">Profesión</label>
+                        <input class="form-control" id="profesion" name="profesion" type="text" required>
                     </div>
                     <div class="col-12 col-sm-6">
-                        <label for="password">Password</label>
-                        <input class="form-control" id="password" name="password" type="password" required>
+                        <label for="tipo_documento">Tipo de Documento</label>
+                        <select class="form-control" id="tipo_documento" name="tipo_documento" required>
+                                <option value="cedula_identidad">CI (Cédula de Identidad)</option>
+                                <option value="dni">DNI (Documento Nacional de Identidad)</option>
+                                <option value="pasaporte">Pasaporte</option>
+                                <option value="licencia_conducir">Licencia de Conducir</option>
+                                <option value="tarjeta_residencia">Tarjeta de Residencia</option>
+                                <option value="certificado_nacimiento">Certificado de Nacimiento</option>
+                                <option value="visa">Visa</option>
+                        </select>
+                    </div>
+
+                    <div class="col-12 col-sm-6">
+                        <label for="numero_documento">Número de Documento</label>
+                        <input class="form-control" id="numero_documento" name="numero_documento" type="text" required>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <label for="procedencia">Procedencia</label>
+                        <input class="form-control" id="procedencia" name="procedencia" type="text" required>
                     </div>
                 </div>
             </div>
             <div class="form-group">
                 <button type="submit" class="btn btn-primary">Agregar</button>
-                <a href="<?php echo base_url('usuario'); ?>" class="btn btn-danger">Cancelar</a>
+                <a href="<?php echo base_url('huesped'); ?>" class="btn btn-danger">Cancelar</a>
             </div>
             <?php echo form_close(); ?>
         </div>
