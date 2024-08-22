@@ -2,13 +2,13 @@
 <div class="container-fluid">
     <div class="row">
         <div class="card-box table-responsive">
-            <h1 class="header-title"> Lista de Usuario </h1> </br>
+            <h1 class="header-title"> Lista de huesped </h1> </br>
             <div>
-                <a href="<?php echo base_url('usuario/agregar'); ?>">
-                    <button type="button" class="btn btn-primary">Agregar Usuario</button>
+                <a href="<?php echo base_url('huesped/agregar'); ?>">
+                    <button type="button" class="btn btn-primary">Agregar huesped</button>
                 </a>
-                <a href="<?php echo base_url('usuario/eliminados'); ?>">
-                    <button type="button" class="btn btn-dark">Usuarios Eliminados</button>
+                <a href="<?php echo base_url('huesped/eliminados'); ?>">
+                    <button type="button" class="btn btn-dark">huesped Eliminados</button>
                 </a>
             </div>
             </br>
@@ -17,12 +17,14 @@
                     <tr>
                         <th>N°</th>
                         <th>Nombres </th>
-                        <th>Apellido Paterno</th>
-                        <th>Apellido Materno</th>
-                        <th>Teléfono</th>
-                        <th>Sueldo</th>
-                        <th>Rol</th>
-                        <th>Email</th>
+                        <th>Apellidos</th>
+                        <th>Nacionalidad</th>
+                        <th>Edad</th>
+                        <th>Estado civuil</th>
+                        <th>Profecion</th>
+                        <th>Tipo de documento</th>
+                        <th>Numero de documento</th>
+                        <th>Procedencia</th>
                         <th>Modificar</th>
                         <th>Eliminar</th>
                     </tr>
@@ -30,21 +32,23 @@
                 <tbody>
                     <?php
                     $contador = 1;
-                    foreach ($usuarios as $usuario) { ?>
+                    foreach ($huespedes as $huesped) { ?>
                     <tr>
                         <td><?php echo $contador; ?></td>
-                        <td><?php echo $usuario['nombres']; ?></td>
-                        <td><?php echo $usuario['apellido_paterno']; ?></td>
-                        <td><?php echo $usuario['apellido_materno']; ?></td>
-                        <td><?php echo $usuario['telefono']; ?></td>
-                        <td><?php echo $usuario['sueldo']; ?></td>
-                        <td><?php echo $usuario['rol']; ?></td>
-                        <td><?php echo $usuario['email']; ?></td>
+                        <td><?php echo $huesped['nombres']; ?></td>
+                        <td><?php echo $huesped['apellidos']; ?></td>
+                        <td><?php echo $huesped['nacionalidad']; ?></td>
+                        <td><?php echo $huesped['fecha_nacimiento']; ?></td>
+                        <td><?php echo $huesped['estado_civil']; ?></td>
+                        <td><?php echo $huesped['profesion']; ?></td>
+                        <td><?php echo $huesped['tipo_documento']; ?></td>
+                        <td><?php echo $huesped['numero_documento']; ?></td>
+                        <td><?php echo $huesped['procedencia']; ?></td>
                         <td>
-                            <a href="<?php echo base_url('usuario/editar/'.$usuario['id']); ?>" class="btn btn-warning"><i class="fa-solid fa-pencil"></i></a>
+                            <a href="<?php echo base_url('huesped/editar/'.$huesped['id']); ?>" class="btn btn-warning"><i class="fa-solid fa-pencil"></i></a>
                         </td>
                         <td>
-                            <a href="#" data-href="<?php echo base_url('usuario/eliminarbd/'.$usuario['id']); ?>" 
+                            <a href="#" data-href="<?php echo base_url('huesped/eliminarbd/'.$huesped['id']); ?>" 
                             data-toggle="modal" data-target="#modal-confirma" data-placement="top" 
                             title="Eliminar Registro" class="btn btn-danger"><i class="fa-solid fa-trash"></i></a>
                         </td>
@@ -63,13 +67,13 @@
   <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Eliminar Usuario</h5>
+        <h5 class="modal-title" id="exampleModalLongTitle">Eliminar huesped</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        <p>¿Estás seguro de eliminar este Usuario?</p>
+        <p>¿Estás seguro de eliminar este huesped?</p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>

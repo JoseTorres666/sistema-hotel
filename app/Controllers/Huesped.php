@@ -3,37 +3,41 @@
 namespace App\Controllers;
 
 use App\Controllers\BaseController;
-use App\Models\UsuarioModel;
+use App\Models\HuespedModel;
 
-class Usuario extends BaseController
+class Huesped extends BaseController
 {
-    protected $usuario;
+    protected $huespedModel;
 
     public function __construct()
     {
-        $this->usuario = new UsuarioModel();
+        $this->huespedModel = new HuespedModel();
     }
 
     public function index()
     {
-        $usuarios = $this->usuario->where('estado', 1)->findAll();
-        $data['usuarios'] = $usuarios;
+        $huespedes = $this->huespedModel->getHuespedesConEdad();
+        
+        $data['huespedes'] = $huespedes;
         
         echo view('template/header'); 
-        echo view('usuario/listar', $data);
+        echo view('huesped/listar', $data);
         echo view('template/footer');
     }
 
-    public function agregar()
+
+
+
+    /*public function agregar()
     {
         echo view('template/header'); 
-        echo view('usuario/agregar');
+        echo view('huesped/agregar');
         echo view('template/footer');
     }
 
     public function agregarbd()
     {
-        // Datos de usuario transformados a mayúsculas
+        // Datos de huesped transformados a mayúsculas
         $usuarioData = [
             'nombres' => strtoupper($this->request->getPost('nombres')),
             'apellido_paterno' => strtoupper($this->request->getPost('apellido_paterno')),
@@ -45,30 +49,30 @@ class Usuario extends BaseController
             'password' => password_hash($this->request->getPost('password'), PASSWORD_DEFAULT) // Asegurando la contraseña
         ];
 
-        // Guardar usuario
-        $this->usuario->save($usuarioData);
+        // Guardar huesped
+        $this->huespedModel->save($usuarioData);
 
         // Redireccionar con éxito
-        return redirect()->to(base_url('usuario'));
+        return redirect()->to(base_url('huesped'));
     }
 
 
     public function editar($id)
     {
-        $usuario = $this->usuario->find($id);
-        $data['usuario'] = $usuario; // Cambiado 'usuarios' a 'usuario' para mayor claridad
+        $huesped = $this->huespedModel->find($id);
+        $data['huesped'] = $huesped; // Cambiado 'huesped' a 'huesped' para mayor claridad
 
         echo view('template/header'); 
-        echo view('usuario/editar', $data);
+        echo view('huesped/editar', $data);
         echo view('template/footer');
     }
 
     public function actualizarbd()
     {
-        // Obtener el ID del usuario
+        // Obtener el ID del huesped
         $idusuario = $this->request->getPost('idusuario');
 
-        // Datos de usuario transformados a mayúsculas
+        // Datos de huesped transformados a mayúsculas
         $usuarioData = [
             'nombres' => strtoupper($this->request->getPost('nombres')),
             'apellido_paterno' => strtoupper($this->request->getPost('apellido_paterno')),
@@ -80,39 +84,39 @@ class Usuario extends BaseController
             'password' => password_hash($this->request->getPost('password'), PASSWORD_DEFAULT) // Asegurando la contraseña
         ];
 
-        // Actualizar usuario
-        $this->usuario->update($idusuario, $usuarioData);
+        // Actualizar huesped
+        $this->huespedModel->update($idusuario, $usuarioData);
 
         // Redireccionar con éxito
-        return redirect()->to(base_url('usuario'));
+        return redirect()->to(base_url('huesped'));
     }
 
 
     public function eliminarbd($id)
     {
         // Borrado lógico
-        $this->usuario->update($id, ['estado' => 0]);
+        $this->huespedModel->update($id, ['estado' => 0]);
 
         // Redireccionar con éxito
-        return redirect()->to(base_url('usuario'))->with('message', 'Usuario eliminado exitosamente');
+        return redirect()->to(base_url('huesped'))->with('message', 'huesped eliminado exitosamente');
     }
 
     public function eliminados()
     {
-        $usuarios = $this->usuario->where('estado', 0)->findAll();
-        $data['usuarios'] = $usuarios;
+        $huesped = $this->huespedModel->where('estado', 0)->findAll();
+        $data['huesped'] = $huesped;
         
         echo view('template/header'); 
-        echo view('usuario/eliminados', $data);
+        echo view('huesped/eliminados', $data);
         echo view('template/footer');
     }
 
     public function integrar($id)
     {
-        // Restaurar usuario
-        $this->usuario->update($id, ['estado' => 1]);
+        // Restaurar huesped
+        $this->huespedModel->update($id, ['estado' => 1]);
 
         // Redireccionar con éxito
-        return redirect()->to(base_url('usuario/eliminados'))->with('message', 'Usuario restaurado exitosamente');
-    }
+        return redirect()->to(base_url('huesped/eliminados'))->with('message', 'huesped restaurado exitosamente');
+    }*/
 }

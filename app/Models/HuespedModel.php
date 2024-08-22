@@ -8,11 +8,19 @@ class HuespedModel extends Model
 {
     protected $table = 'huesped';
     protected $primaryKey = 'id';
+    protected $allowedFields = [
+        'nombres', 'apellidos', 'nacionalidad', 'fecha_nacimiento', 
+        'estado_civil', 'profesion', 'tipo_documento', 'numero_documento', 
+        'procedencia', 'estado'
+    ];
 
-    protected $allowedFields = ['nombres', 'apellido_paterno','apellido_materno', 'telefono', 'sueldo', 'rol', 'email', 'password', 'estado'];
-
-    protected $useTimestamps = true;
-    protected $createdField  = 'fecha_registro';
-    protected $updatedField  = 'fecha_actualizacion';
-    protected $deletedField  = 'deleted_at';
+    public function getHuespedesConEdad()
+    {
+        $builder = $this->db->table($this->table);
+        $builder->select('id, nombres, apellidos, nacionalidad, fecha_nacimiento, TIMESTAMPDIFF(YEAR, fecha_nacimiento, CURDATE()) AS edad','estado_civil', 'profesion', 'tipo_documento', 'numero_documento', 
+        'procedencia');
+        $builder->where('estado', 1);
+        $query = $builder->get();
+        return $query->getResultArray();
+    }
 }

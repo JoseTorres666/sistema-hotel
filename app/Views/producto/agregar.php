@@ -18,13 +18,17 @@
                         <label for="precio_compra">Precio de Compra</label>
                         <input class="form-control" id="precio_compra" name="precio_compra" type="text" required>
                     </div>
+                    <!--<div class="col-12 col-sm-6">
+                        <label for="precio_unitario">Precio Unitario de venta</label>
+                        <input class="form-control" id="precio_unitario" name="precio_unitario" type="text" required>
+                    </div>-->
                     <div class="col-12 col-sm-6">
                         <label for="stock">Stock</label>
                         <input class="form-control" id="stock" name="stock" type="text" required>
                     </div>
                     <div class="col-12 col-sm-6">
                         <label for="imagen">Subir Imagen</label>
-                        <input class="form-control-file" id="imagen" name="imagen" type="file" required>
+                        <input class="form-control-file" id="imagen" name="imagen" type="file">
                     </div>
                 </div>
             </div>

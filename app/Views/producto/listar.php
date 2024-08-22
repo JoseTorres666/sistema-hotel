@@ -23,6 +23,7 @@
                         <th>Nombre</th>
                         <th>Descripcion</th>
                         <th>Precio de Compra</th>
+                        <!--<th>Precio de Venta</th>-->
                         <th>Stock</th>
                         <th>Modificar</th>
                         <th>Eliminar</th>
@@ -48,7 +49,8 @@
                         <td><?php echo $producto['nombre']; ?></td>
                         <td><?php echo $producto['descripcion']; ?></td>
                         <td><?php echo $producto['precio_compra']; ?></td>
-                        <td><?php echo $producto['stock']; ?></td>
+                        <!--<td><?php echo isset($producto['precio_unitario']) ? $producto['precio_unitario'] : 'No disponible'; ?></td>
+                        --><td><?php echo $producto['stock']; ?></td>
                         <td>
                             <a href="<?php echo base_url('producto/editar/'.$producto['id']); ?>" class="btn btn-warning">
                               <i class=" mdi mdi-eyedropper" style="font-size: 20px;"></i>

@@ -142,9 +142,9 @@ $user_session = $session_user->get();?>
                             </li>
 
                             <li>
-                                <a href="taskboard.html">
+                            <a href="<?php echo base_url();?>/huesped">
                                     <i class="fe-file-text"></i> 
-                                    <span> Task Board </span>
+                                    <span>huesped</span>
                                 </a>
                             </li>
 
