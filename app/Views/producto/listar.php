@@ -36,16 +36,10 @@
                     <tr>
                         <td><?php echo $contador; ?></td>
                         <td>
-                          <?php
-                          $imagen = $producto['imagen'];
-                          if (empty($imagen)) { ?>
-                              <img src="<?php echo base_url();?>/imagen/producto/producto.png" style="width: 50px;">
-                          <?php
-                          } else { ?>
-                              <img src="<?php echo base_url();?>/imagen/producto/<?php echo $imagen; ?>" style="width: 50px;">
-                          <?php
-                          } ?>
+                            <?php $imagen = $producto['imagen'] ?? ''; ?>
+                            <img src="<?= base_url('imagen/producto/' . (!empty($imagen) ? $imagen : 'producto.png')) ?>" style="width: 50px;">
                         </td>
+
                         <td><?php echo $producto['nombre']; ?></td>
                         <td><?php echo $producto['descripcion']; ?></td>
                         <td><?php echo $producto['precio_compra']; ?></td>

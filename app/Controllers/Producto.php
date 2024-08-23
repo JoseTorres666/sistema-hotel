@@ -19,19 +19,13 @@ class Producto extends Controller
 
     public function index()
     {
-        // Aquí deberías unir la tabla 'detalle_producto' con 'productos'
-        $productos = $this->productoModel
-            ->select('producto.*, detalle_producto.precio_unitario')
-            ->join('detalle_producto', 'detalle_producto.id_producto = producto.id', 'left')
-            ->where('producto.estado', 1)
-            ->findAll();
-
-        $data['productos'] = $productos;
+        $data['productos'] = $this->productoModel->findAll(); // Correcta asignación
 
         echo view('template/header');
         echo view('producto/listar', $data);
         echo view('template/footer');
     }
+
 
 
     public function agregar()
@@ -47,8 +41,7 @@ class Producto extends Controller
             'nombre' => 'required',
             'descripcion' => 'required',
             'precio_compra' => 'required',
-            'stock' => 'required',
-            'precio_unitario' => 'required'  // Asegúrate de validar el precio unitario
+            'stock' => 'required'
         ];
 
         if ($this->validate($rules)) {
@@ -61,8 +54,7 @@ class Producto extends Controller
                 'stock' => $this->request->getPost('stock'),
                 'estado' => 1,
                 'id_usuario' => session()->get('id_usuario'),
-                'imagen' => '',
-                'precio_unitario' => $this->request->getPost('precio_unitario')  // Añade el precio unitario aquí
+                'imagen' => ''
             ];
 
             $idProducto = $this->productoModel->insert($dataProducto);
@@ -108,8 +100,7 @@ class Producto extends Controller
             'nombre' => 'required',
             'descripcion' => 'required',
             'precio_compra' => 'required',
-            'stock' => 'required',
-            'precio_unitario' => 'required'  // Asegúrate de validar el precio unitario
+            'stock' => 'required'
         ];
 
         $id = $this->request->getPost('id');
@@ -119,8 +110,7 @@ class Producto extends Controller
                 'nombre' => strtoupper($this->request->getPost('nombre')),
                 'descripcion' => strtoupper($this->request->getPost('descripcion')),
                 'precio_compra' => $this->request->getPost('precio_compra'),
-                'stock' => $this->request->getPost('stock'),
-                'precio_unitario' => $this->request->getPost('precio_unitario')  // Añade el precio unitario aquí
+                'stock' => $this->request->getPost('stock')
             ];
 
             $file = $this->request->getFile('imagen');
@@ -177,30 +167,6 @@ class Producto extends Controller
         return redirect()->to(base_url('producto/eliminados'))->with('message', 'Producto restaurado exitosamente');
     }
 
-    public function agregarDetalleProducto($idVenta)
-    {
-        $rules = [
-            'id_producto' => 'required',
-            'cantidad' => 'required',
-            'precio_unitario' => 'required',
-        ];
-
-        if ($this->validate($rules)) {
-            $data = [
-                'id_producto' => $this->request->getPost('id_producto'),
-                'id_venta' => $idVenta,
-                'cantidad' => $this->request->getPost('cantidad'),
-                'precio_unitario' => $this->request->getPost('precio_unitario'),
-            ];
-
-            if ($this->detalleProductoModel->insert($data)) {
-                return redirect()->to(base_url('venta/detalle/' . $idVenta))->with('success', 'Detalle de producto agregado con éxito.');
-            } else {
-                return redirect()->back()->withInput()->with('error', 'No se pudo agregar el detalle de producto.');
-            }
-        } else {
-            return redirect()->back()->withInput()->with('errors', $this->validator->getErrors());
-        }
-    }
+    
 }
 
