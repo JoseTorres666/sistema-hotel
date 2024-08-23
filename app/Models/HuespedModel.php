@@ -16,21 +16,16 @@ class HuespedModel extends Model
 
     public function getHuespedesConEdad()
     {
-        $huespedes = $this->findAll();
-
-        foreach ($huespedes as &$huesped) {
-            $huesped['edad'] = $this->calcularEdad($huesped['fecha_nacimiento']);
-        }
-
-        return $huespedes;
+        return $this->select("*, TIMESTAMPDIFF(YEAR, fecha_nacimiento, CURDATE()) as edad")
+                    ->where('estado', 1)
+                    ->findAll();
     }
 
-    private function calcularEdad($fecha_nacimiento)
+    public function getHuespedesInactivosConEdad()
     {
-        $fecha_nacimiento = new \DateTime($fecha_nacimiento);
-        $hoy = new \DateTime();
-        $edad = $hoy->diff($fecha_nacimiento)->y;
-
-        return $edad;
+        return $this->select("*, TIMESTAMPDIFF(YEAR, fecha_nacimiento, CURDATE()) as edad")
+                    ->where('estado', 0)
+                    ->findAll();
     }
+
 }

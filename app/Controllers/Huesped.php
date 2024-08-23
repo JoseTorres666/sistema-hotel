@@ -99,16 +99,19 @@ class Huesped extends BaseController
         return redirect()->to(base_url('huesped'))->with('message', 'Huésped eliminado exitosamente');
     }
 
+
     public function eliminados()
     {
-        // Obtener los huéspedes eliminados
-        $huespedes = $this->huespedModel->where('estado', 0)->findAll();
+        $huespedes = $this->huespedModel->getHuespedesInactivosConEdad();
         $data['huespedes'] = $huespedes;
-        
-        echo view('template/header'); 
+
+        echo view('template/header');
         echo view('huesped/eliminados', $data);
         echo view('template/footer');
     }
+
+
+
 
     public function integrar($id)
     {

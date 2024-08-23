@@ -1356,3 +1356,160 @@ in APPPATH\Views\huesped\editar.php on line 8.
  9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-22 22:43:06 --> ParseError: syntax error, unexpected token "return", expecting identifier or variable or "{" or "$"
+[Method: GET, Route: huesped]
+in APPPATH\Controllers\Huesped.php on line 100.
+ 1 SYSTEMPATH\Router\Router.php(563): CodeIgniter\Router\AutoRouter->getRoute('huesped', 'GET')
+ 2 SYSTEMPATH\Router\Router.php(228): CodeIgniter\Router\Router->autoRoute('huesped')
+ 3 SYSTEMPATH\CodeIgniter.php(834): CodeIgniter\Router\Router->handle('huesped')
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-22 22:50:46 --> ErrorException: Undefined array key "edad"
+[Method: GET, Route: huesped/eliminados]
+in APPPATH\Views\huesped\eliminados.php on line 34.
+ 1 APPPATH\Views\huesped\eliminados.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "edad"', 'C:\\xampp\\htdocs\\sistema-hotel\\app\\Views\\huesped\\eliminados.php', 34)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\sistema-hotel\\app\\Views\\huesped\\eliminados.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('huesped/eliminados', [], true)
+ 5 APPPATH\Controllers\Huesped.php(110): view('huesped/eliminados', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Huesped->eliminados()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Huesped))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-22 22:51:16 --> ErrorException: Undefined array key "edad"
+[Method: GET, Route: huesped/eliminados]
+in APPPATH\Views\huesped\eliminados.php on line 35.
+ 1 APPPATH\Views\huesped\eliminados.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "edad"', 'C:\\xampp\\htdocs\\sistema-hotel\\app\\Views\\huesped\\eliminados.php', 35)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\sistema-hotel\\app\\Views\\huesped\\eliminados.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('huesped/eliminados', [], true)
+ 5 APPPATH\Controllers\Huesped.php(110): view('huesped/eliminados', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Huesped->eliminados()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Huesped))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-22 22:53:24 --> ErrorException: Undefined array key "edad"
+[Method: GET, Route: huesped/eliminados]
+in APPPATH\Views\huesped\eliminados.php on line 38.
+ 1 APPPATH\Views\huesped\eliminados.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "edad"', 'C:\\xampp\\htdocs\\sistema-hotel\\app\\Views\\huesped\\eliminados.php', 38)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\sistema-hotel\\app\\Views\\huesped\\eliminados.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('huesped/eliminados', [], true)
+ 5 APPPATH\Controllers\Huesped.php(110): view('huesped/eliminados', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Huesped->eliminados()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Huesped))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-22 22:54:28 --> ErrorException: Undefined array key "edad"
+[Method: GET, Route: huesped/eliminados]
+in APPPATH\Views\huesped\eliminados.php on line 38.
+ 1 APPPATH\Views\huesped\eliminados.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "edad"', 'C:\\xampp\\htdocs\\sistema-hotel\\app\\Views\\huesped\\eliminados.php', 38)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\sistema-hotel\\app\\Views\\huesped\\eliminados.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('huesped/eliminados', [], true)
+ 5 APPPATH\Controllers\Huesped.php(109): view('huesped/eliminados', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Huesped->eliminados()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Huesped))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-22 23:03:18 --> ErrorException: Undefined array key "edad"
+[Method: GET, Route: huesped/eliminados]
+in APPPATH\Views\huesped\eliminados.php on line 38.
+ 1 APPPATH\Views\huesped\eliminados.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "edad"', 'C:\\xampp\\htdocs\\sistema-hotel\\app\\Views\\huesped\\eliminados.php', 38)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\sistema-hotel\\app\\Views\\huesped\\eliminados.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('huesped/eliminados', [], true)
+ 5 APPPATH\Controllers\Huesped.php(109): view('huesped/eliminados', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Huesped->eliminados()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Huesped))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-22 23:03:35 --> ErrorException: Undefined array key "edad"
+[Method: GET, Route: huesped/eliminados]
+in APPPATH\Views\huesped\eliminados.php on line 38.
+ 1 APPPATH\Views\huesped\eliminados.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "edad"', 'C:\\xampp\\htdocs\\sistema-hotel\\app\\Views\\huesped\\eliminados.php', 38)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\sistema-hotel\\app\\Views\\huesped\\eliminados.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('huesped/eliminados', [], true)
+ 5 APPPATH\Controllers\Huesped.php(109): view('huesped/eliminados', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Huesped->eliminados()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Huesped))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-22 23:08:29 --> ErrorException: Undefined variable $usuario
+[Method: GET, Route: huesped/eliminados]
+in APPPATH\Views\huesped\eliminados.php on line 57.
+ 1 APPPATH\Views\huesped\eliminados.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuario', 'C:\\xampp\\htdocs\\sistema-hotel\\app\\Views\\huesped\\eliminados.php', 57)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\sistema-hotel\\app\\Views\\huesped\\eliminados.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('huesped/eliminados', [], true)
+ 5 APPPATH\Controllers\Huesped.php(110): view('huesped/eliminados', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Huesped->eliminados()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Huesped))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-22 23:11:08 --> ErrorException: Undefined array key "edad"
+[Method: GET, Route: huesped/eliminados]
+in APPPATH\Views\huesped\eliminados.php on line 37.
+ 1 APPPATH\Views\huesped\eliminados.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "edad"', 'C:\\xampp\\htdocs\\sistema-hotel\\app\\Views\\huesped\\eliminados.php', 37)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\sistema-hotel\\app\\Views\\huesped\\eliminados.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('huesped/eliminados', [], true)
+ 5 APPPATH\Controllers\Huesped.php(110): view('huesped/eliminados', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Huesped->eliminados()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Huesped))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-22 23:12:09 --> ErrorException: Undefined array key "edad"
+[Method: GET, Route: huesped/eliminados]
+in APPPATH\Views\huesped\eliminados.php on line 37.
+ 1 APPPATH\Views\huesped\eliminados.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "edad"', 'C:\\xampp\\htdocs\\sistema-hotel\\app\\Views\\huesped\\eliminados.php', 37)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\sistema-hotel\\app\\Views\\huesped\\eliminados.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('huesped/eliminados', [], true)
+ 5 APPPATH\Controllers\Huesped.php(110): view('huesped/eliminados', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Huesped->eliminados()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Huesped))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-22 23:13:41 --> BadMethodCallException: Call to undefined method App\Models\HuespedModel::calcularEdad
+[Method: GET, Route: huesped/eliminados]
+in SYSTEMPATH\Model.php on line 932.
+ 1 APPPATH\Controllers\Huesped.php(110): CodeIgniter\Model->__call('calcularEdad', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Huesped->eliminados()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Huesped))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-22 23:16:54 --> BadMethodCallException: Call to undefined method App\Models\HuespedModel::calcularEdad
+[Method: GET, Route: huesped/eliminados]
+in SYSTEMPATH\Model.php on line 932.
+ 1 APPPATH\Controllers\Huesped.php(110): CodeIgniter\Model->__call('calcularEdad', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Huesped->eliminados()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Huesped))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

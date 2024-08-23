@@ -11,39 +11,48 @@
             <br>
             <table id="datatable-buttons" class="table table-bordered table-striped text-center" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                 <thead>
-                    <tr>
-                        <th>N°</th>
-                        <th>Nombres</th>
-                        <th>Apellidos</th>
-                        <th>Nacionalidad</th>
-                        <th>Fecha de Nacimiento</th>
-                        <th>Profesión</th>
-                        <th>Procedencia</th>
-                        <th>Reintegrar</th>
-                    </tr>
-                </thead>
+                        <tr>
+                            <th>N°</th>
+                            <th>Nombres</th>
+                            <th>Apellidos</th>
+                            <th>Nacionalidad</th>
+                            <th>Edad</th>
+                            <th>Estado civil</th>
+                            <th>Profesión</th>
+                            <th>Tipo de documento</th>
+                            <th>Número de documento</th>
+                            <th>Procedencia</th>
+                            <th>Integrar</th>
+                        </tr>
+                    </thead>
                 <tbody>
-                    <?php
-                    $contador = 1;
-                    foreach ($huespedes as $huesped) { ?>
-                    <tr>
-                        <td><?php echo $contador; ?></td>
-                        <td><?php echo $huesped['nombres']; ?></td>
-                        <td><?php echo $huesped['apellidos']; ?></td>
-                        <td><?php echo $huesped['nacionalidad']; ?></td>
-                        <td><?php echo $huesped['fecha_nacimiento']; ?></td>
-                        <td><?php echo $huesped['profesion']; ?></td>
-                        <td><?php echo $huesped['procedencia']; ?></td>
-                        <td>
-                            <a href="#" data-href="<?php echo base_url('huesped/reintegrar/'.$huesped['id']); ?>" 
+                  <?php
+                  $contador = 1;
+                  foreach ($huespedes as $huesped) { ?>
+                  <tr>
+                      <td><?php echo $contador; ?></td>
+                      <td><?php echo $huesped['nombres']; ?></td>
+                      <td><?php echo $huesped['apellidos']; ?></td>
+                      <td><?php echo $huesped['nacionalidad']; ?></td>
+                      <td><?php echo $huesped['edad']; ?></td>
+                      <td><?php echo $huesped['estado_civil']; ?></td>
+                      <td><?php echo $huesped['profesion']; ?></td>
+                      <td><?php echo $huesped['tipo_documento']; ?></td>
+                      <td><?php echo $huesped['numero_documento']; ?></td>
+                      <td><?php echo $huesped['procedencia']; ?></td>
+                      <td>
+                          <a href="#" data-href="<?php echo base_url('huesped/integrar/'.$huesped['id']); ?>" 
                             data-toggle="modal" data-target="#modal-confirma" data-placement="top" 
-                            title="Reingresar Huésped" class="btn btn-purple"><i class="fa-solid fa-address-book"></i></a>
-                        </td>
-                    </tr>
-                    <?php
-                    $contador++;
-                    } ?>
-                </tbody>
+                            title="Eliminar Registro" class="btn btn-purple">
+                            <i class="mdi mdi-recycle"style="font-size: 20px"></i>
+                          </a>
+                      </td>
+                  </tr>
+                  <?php
+                  $contador++;
+                  } ?>
+              </tbody>
+
             </table>
         </div>
     </div><!-- end row -->
