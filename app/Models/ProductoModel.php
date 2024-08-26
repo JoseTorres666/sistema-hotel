@@ -13,4 +13,9 @@ class ProductoModel extends Model
     [
         'nombre', 'descripcion', 'precio_compra', 'precio_venta', 'stock', 'estado','imagen', 'id_usuario'
     ];
+
+    protected $useTimestamps = true;
+    protected $createdField  = 'fecha_registro';
+    protected $updatedField  = 'fecha_actualizacion';
+    protected $deletedField  = 'deleted_at';
 }

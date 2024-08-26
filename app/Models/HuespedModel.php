@@ -28,4 +28,9 @@ class HuespedModel extends Model
                     ->findAll();
     }
 
+    protected $useTimestamps = true;
+    protected $createdField  = 'fecha_registro';
+    protected $updatedField  = 'fecha_actualizacion';
+    protected $deletedField  = 'deleted_at';
+
 }
