@@ -1,0 +1,296 @@
+ERROR - 2024-08-27 00:03:28 --> mysqli_sql_exception: Unknown column 'fecha_nacimiento' in 'field list' in C:\xampp\htdocs\sistema-hotel\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\sistema-hotel\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT *, TIMES...', 0)
+#1 C:\xampp\htdocs\sistema-hotel\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, TIMES...')
+#2 C:\xampp\htdocs\sistema-hotel\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, TIMES...')
+#3 C:\xampp\htdocs\sistema-hotel\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *, TIMES...', Array, false)
+#4 C:\xampp\htdocs\sistema-hotel\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sistema-hotel\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\sistema-hotel\app\Models\HuespedModel.php(21): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\sistema-hotel\app\Controllers\Huesped.php(19): App\Models\HuespedModel->getHuespedesConEdad()
+#8 C:\xampp\htdocs\sistema-hotel\system\CodeIgniter.php(933): App\Controllers\Huesped->index()
+#9 C:\xampp\htdocs\sistema-hotel\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Huesped))
+#10 C:\xampp\htdocs\sistema-hotel\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\sistema-hotel\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\sistema-hotel\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\sistema-hotel\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2024-08-27 00:03:28 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'fecha_nacimiento' in 'field list'
+[Method: GET, Route: huesped]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *, TIMESTAMPDIFF(YEAR, `fecha_nacimiento`, CURDATE()) as edad
+FROM `huesped`
+WHERE `estado` = :estado:', [...], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\HuespedModel.php(21): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Huesped.php(19): App\Models\HuespedModel->getHuespedesConEdad()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Huesped->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Huesped))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-27 00:03:28 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'fecha_nacimiento' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, TIMESTAMPDIFF(YEAR, `fecha_nacimiento`, CURDATE()) as edad
+FROM `huesped`
+WHERE `estado` = 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, TIMESTAMPDIFF(YEAR, `fecha_nacimiento`, CURDATE()) as edad
+FROM `huesped`
+WHERE `estado` = 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *, TIMESTAMPDIFF(YEAR, `fecha_nacimiento`, CURDATE()) as edad
+FROM `huesped`
+WHERE `estado` = :estado:', [...], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\HuespedModel.php(21): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\Huesped.php(19): App\Models\HuespedModel->getHuespedesConEdad()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Huesped->index()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Huesped))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-27 00:03:28 --> [Caused by] mysqli_sql_exception: Unknown column 'fecha_nacimiento' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT *, TIMESTAMPDIFF(YEAR, `fecha_nacimiento`, CURDATE()) as edad
+FROM `huesped`
+WHERE `estado` = 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, TIMESTAMPDIFF(YEAR, `fecha_nacimiento`, CURDATE()) as edad
+FROM `huesped`
+WHERE `estado` = 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, TIMESTAMPDIFF(YEAR, `fecha_nacimiento`, CURDATE()) as edad
+FROM `huesped`
+WHERE `estado` = 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *, TIMESTAMPDIFF(YEAR, `fecha_nacimiento`, CURDATE()) as edad
+FROM `huesped`
+WHERE `estado` = :estado:', [...], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\HuespedModel.php(21): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Huesped.php(19): App\Models\HuespedModel->getHuespedesConEdad()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Huesped->index()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Huesped))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-08-27 16:47:36 --> mysqli_sql_exception: Unknown column 'fecha_nacimiento' in 'field list' in C:\xampp\htdocs\sistema-hotel\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\sistema-hotel\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT *, TIMES...', 0)
+#1 C:\xampp\htdocs\sistema-hotel\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, TIMES...')
+#2 C:\xampp\htdocs\sistema-hotel\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, TIMES...')
+#3 C:\xampp\htdocs\sistema-hotel\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *, TIMES...', Array, false)
+#4 C:\xampp\htdocs\sistema-hotel\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sistema-hotel\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\sistema-hotel\app\Models\HuespedModel.php(21): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\sistema-hotel\app\Controllers\Huesped.php(19): App\Models\HuespedModel->getHuespedesConEdad()
+#8 C:\xampp\htdocs\sistema-hotel\system\CodeIgniter.php(933): App\Controllers\Huesped->index()
+#9 C:\xampp\htdocs\sistema-hotel\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Huesped))
+#10 C:\xampp\htdocs\sistema-hotel\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\sistema-hotel\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\sistema-hotel\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\sistema-hotel\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2024-08-27 16:47:36 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'fecha_nacimiento' in 'field list'
+[Method: GET, Route: huesped]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *, TIMESTAMPDIFF(YEAR, `fecha_nacimiento`, CURDATE()) as edad
+FROM `huesped`
+WHERE `estado` = :estado:', [...], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\HuespedModel.php(21): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Huesped.php(19): App\Models\HuespedModel->getHuespedesConEdad()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Huesped->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Huesped))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-27 16:47:36 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'fecha_nacimiento' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, TIMESTAMPDIFF(YEAR, `fecha_nacimiento`, CURDATE()) as edad
+FROM `huesped`
+WHERE `estado` = 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, TIMESTAMPDIFF(YEAR, `fecha_nacimiento`, CURDATE()) as edad
+FROM `huesped`
+WHERE `estado` = 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *, TIMESTAMPDIFF(YEAR, `fecha_nacimiento`, CURDATE()) as edad
+FROM `huesped`
+WHERE `estado` = :estado:', [...], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\HuespedModel.php(21): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\Huesped.php(19): App\Models\HuespedModel->getHuespedesConEdad()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Huesped->index()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Huesped))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-27 16:47:36 --> [Caused by] mysqli_sql_exception: Unknown column 'fecha_nacimiento' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT *, TIMESTAMPDIFF(YEAR, `fecha_nacimiento`, CURDATE()) as edad
+FROM `huesped`
+WHERE `estado` = 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, TIMESTAMPDIFF(YEAR, `fecha_nacimiento`, CURDATE()) as edad
+FROM `huesped`
+WHERE `estado` = 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, TIMESTAMPDIFF(YEAR, `fecha_nacimiento`, CURDATE()) as edad
+FROM `huesped`
+WHERE `estado` = 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *, TIMESTAMPDIFF(YEAR, `fecha_nacimiento`, CURDATE()) as edad
+FROM `huesped`
+WHERE `estado` = :estado:', [...], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\HuespedModel.php(21): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Huesped.php(19): App\Models\HuespedModel->getHuespedesConEdad()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Huesped->index()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Huesped))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-08-27 16:47:45 --> mysqli_sql_exception: Unknown column 'fecha_nacimiento' in 'field list' in C:\xampp\htdocs\sistema-hotel\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\sistema-hotel\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT *, TIMES...', 0)
+#1 C:\xampp\htdocs\sistema-hotel\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, TIMES...')
+#2 C:\xampp\htdocs\sistema-hotel\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, TIMES...')
+#3 C:\xampp\htdocs\sistema-hotel\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *, TIMES...', Array, false)
+#4 C:\xampp\htdocs\sistema-hotel\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sistema-hotel\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\sistema-hotel\app\Models\HuespedModel.php(21): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\sistema-hotel\app\Controllers\Huesped.php(19): App\Models\HuespedModel->getHuespedesConEdad()
+#8 C:\xampp\htdocs\sistema-hotel\system\CodeIgniter.php(933): App\Controllers\Huesped->index()
+#9 C:\xampp\htdocs\sistema-hotel\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Huesped))
+#10 C:\xampp\htdocs\sistema-hotel\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\sistema-hotel\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\sistema-hotel\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\sistema-hotel\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2024-08-27 16:47:45 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'fecha_nacimiento' in 'field list'
+[Method: GET, Route: huesped]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *, TIMESTAMPDIFF(YEAR, `fecha_nacimiento`, CURDATE()) as edad
+FROM `huesped`
+WHERE `estado` = :estado:', [...], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\HuespedModel.php(21): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Huesped.php(19): App\Models\HuespedModel->getHuespedesConEdad()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Huesped->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Huesped))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-27 16:47:45 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'fecha_nacimiento' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, TIMESTAMPDIFF(YEAR, `fecha_nacimiento`, CURDATE()) as edad
+FROM `huesped`
+WHERE `estado` = 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, TIMESTAMPDIFF(YEAR, `fecha_nacimiento`, CURDATE()) as edad
+FROM `huesped`
+WHERE `estado` = 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *, TIMESTAMPDIFF(YEAR, `fecha_nacimiento`, CURDATE()) as edad
+FROM `huesped`
+WHERE `estado` = :estado:', [...], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\HuespedModel.php(21): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\Huesped.php(19): App\Models\HuespedModel->getHuespedesConEdad()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Huesped->index()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Huesped))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-27 16:47:45 --> [Caused by] mysqli_sql_exception: Unknown column 'fecha_nacimiento' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT *, TIMESTAMPDIFF(YEAR, `fecha_nacimiento`, CURDATE()) as edad
+FROM `huesped`
+WHERE `estado` = 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, TIMESTAMPDIFF(YEAR, `fecha_nacimiento`, CURDATE()) as edad
+FROM `huesped`
+WHERE `estado` = 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, TIMESTAMPDIFF(YEAR, `fecha_nacimiento`, CURDATE()) as edad
+FROM `huesped`
+WHERE `estado` = 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *, TIMESTAMPDIFF(YEAR, `fecha_nacimiento`, CURDATE()) as edad
+FROM `huesped`
+WHERE `estado` = :estado:', [...], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\HuespedModel.php(21): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Huesped.php(19): App\Models\HuespedModel->getHuespedesConEdad()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Huesped->index()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Huesped))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-08-27 16:49:03 --> mysqli_sql_exception: Unknown column 'imagen' in 'field list' in C:\xampp\htdocs\sistema-hotel\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\sistema-hotel\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `pr...', 0)
+#1 C:\xampp\htdocs\sistema-hotel\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pr...')
+#2 C:\xampp\htdocs\sistema-hotel\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pr...')
+#3 C:\xampp\htdocs\sistema-hotel\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pr...', Array, false)
+#4 C:\xampp\htdocs\sistema-hotel\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\sistema-hotel\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\sistema-hotel\system\Model.php(802): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\sistema-hotel\app\Controllers\Producto.php(60): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\sistema-hotel\system\CodeIgniter.php(933): App\Controllers\Producto->agregarbd()
+#9 C:\xampp\htdocs\sistema-hotel\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Producto))
+#10 C:\xampp\htdocs\sistema-hotel\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\sistema-hotel\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\sistema-hotel\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\sistema-hotel\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2024-08-27 16:49:03 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'imagen' in 'field list'
+[Method: POST, Route: producto/agregarbd]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `producto` (`nombre`, `descripcion`, `precio_compra`, `stock`, `estado`, `id_usuario`, `imagen`, `fecha_registro`, `fecha_actualizacion`) VALUES (:nombre:, :descripcion:, :precio_compra:, :stock:, :estado:, :id_usuario:, :imagen:, :fecha_registro:, :fecha_actualizacion:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Producto.php(60): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Producto->agregarbd()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Producto))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-27 16:49:03 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'imagen' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `producto` (`nombre`, `descripcion`, `precio_compra`, `stock`, `estado`, `id_usuario`, `imagen`, `fecha_registro`, `fecha_actualizacion`) VALUES (\'AGUA\', \'AGUAL DE 2L\', \'12\', \'2\', 1, NULL, \'\', \'2024-08-27 16:49:03\', \'2024-08-27 16:49:03\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `producto` (`nombre`, `descripcion`, `precio_compra`, `stock`, `estado`, `id_usuario`, `imagen`, `fecha_registro`, `fecha_actualizacion`) VALUES (\'AGUA\', \'AGUAL DE 2L\', \'12\', \'2\', 1, NULL, \'\', \'2024-08-27 16:49:03\', \'2024-08-27 16:49:03\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `producto` (`nombre`, `descripcion`, `precio_compra`, `stock`, `estado`, `id_usuario`, `imagen`, `fecha_registro`, `fecha_actualizacion`) VALUES (:nombre:, :descripcion:, :precio_compra:, :stock:, :estado:, :id_usuario:, :imagen:, :fecha_registro:, :fecha_actualizacion:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Producto.php(60): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Producto->agregarbd()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Producto))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-27 16:49:03 --> [Caused by] mysqli_sql_exception: Unknown column 'imagen' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `producto` (`nombre`, `descripcion`, `precio_compra`, `stock`, `estado`, `id_usuario`, `imagen`, `fecha_registro`, `fecha_actualizacion`) VALUES (\'AGUA\', \'AGUAL DE 2L\', \'12\', \'2\', 1, NULL, \'\', \'2024-08-27 16:49:03\', \'2024-08-27 16:49:03\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `producto` (`nombre`, `descripcion`, `precio_compra`, `stock`, `estado`, `id_usuario`, `imagen`, `fecha_registro`, `fecha_actualizacion`) VALUES (\'AGUA\', \'AGUAL DE 2L\', \'12\', \'2\', 1, NULL, \'\', \'2024-08-27 16:49:03\', \'2024-08-27 16:49:03\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `producto` (`nombre`, `descripcion`, `precio_compra`, `stock`, `estado`, `id_usuario`, `imagen`, `fecha_registro`, `fecha_actualizacion`) VALUES (\'AGUA\', \'AGUAL DE 2L\', \'12\', \'2\', 1, NULL, \'\', \'2024-08-27 16:49:03\', \'2024-08-27 16:49:03\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `producto` (`nombre`, `descripcion`, `precio_compra`, `stock`, `estado`, `id_usuario`, `imagen`, `fecha_registro`, `fecha_actualizacion`) VALUES (:nombre:, :descripcion:, :precio_compra:, :stock:, :estado:, :id_usuario:, :imagen:, :fecha_registro:, :fecha_actualizacion:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Producto.php(60): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Producto->agregarbd()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Producto))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
