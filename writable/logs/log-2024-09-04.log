@@ -1,0 +1,127 @@
+CRITICAL - 2024-09-04 14:48:51 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "website/index.php"
+[Method: GET, Route: website]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('website/index.php')
+ 2 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('website/index', [], true)
+ 3 APPPATH\Controllers\website.php(14): view('website/index')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Website->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Website))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-04 14:49:26 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "website/index.php"
+[Method: GET, Route: website]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('website/index.php')
+ 2 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('website/index', [], true)
+ 3 APPPATH\Controllers\website.php(13): view('website/index')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Website->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Website))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-04 14:50:19 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "website/index.php"
+[Method: GET, Route: website]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('website/index.php')
+ 2 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('website/index', [], true)
+ 3 APPPATH\Controllers\website.php(14): view('website/index')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Website->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Website))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-04 14:50:35 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "website/index.php"
+[Method: GET, Route: website]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('website/index.php')
+ 2 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('website/index', [], true)
+ 3 APPPATH\Controllers\website.php(14): view('website/index')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Website->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Website))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-04 18:26:22 --> ParseError: syntax error, unexpected token "]"
+[Method: GET, Route: habitacion]
+in APPPATH\Controllers\Habitacion.php on line 76.
+ 1 SYSTEMPATH\Router\Router.php(563): CodeIgniter\Router\AutoRouter->getRoute('habitacion', 'GET')
+ 2 SYSTEMPATH\Router\Router.php(228): CodeIgniter\Router\Router->autoRoute('habitacion')
+ 3 SYSTEMPATH\CodeIgniter.php(834): CodeIgniter\Router\Router->handle('habitacion')
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-04 18:54:37 --> ParseError: syntax error, unexpected single-quoted string "disponible", expecting "," or ";"
+[Method: GET, Route: habitacion]
+in APPPATH\Views\habitacion\listar.php on line 55.
+ 1 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('habitacion/listar', [], true)
+ 3 APPPATH\Controllers\Habitacion.php(25): view('habitacion/listar', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Habitacion->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Habitacion))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-04 18:58:18 --> ParseError: syntax error, unexpected token ":", expecting "," or ";"
+[Method: GET, Route: habitacion]
+in APPPATH\Views\habitacion\listar.php on line 55.
+ 1 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('habitacion/listar', [], true)
+ 3 APPPATH\Controllers\Habitacion.php(25): view('habitacion/listar', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Habitacion->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Habitacion))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-04 19:38:42 --> ArgumentCountError: Too few arguments to function App\Controllers\Habitacion::editar(), 0 passed in C:\xampp\htdocs\sistema-hotel\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: GET, Route: habitacion/editar]
+in APPPATH\Controllers\Habitacion.php on line 53.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Habitacion->editar()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Habitacion))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-04 19:38:56 --> ArgumentCountError: Too few arguments to function App\Controllers\Habitacion::editar(), 0 passed in C:\xampp\htdocs\sistema-hotel\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: GET, Route: habitacion/editar]
+in APPPATH\Controllers\Habitacion.php on line 53.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Habitacion->editar()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Habitacion))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-04 19:39:13 --> ArgumentCountError: Too few arguments to function App\Controllers\Habitacion::editar(), 0 passed in C:\xampp\htdocs\sistema-hotel\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: GET, Route: habitacion/editar]
+in APPPATH\Controllers\Habitacion.php on line 53.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Habitacion->editar()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Habitacion))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-04 19:39:26 --> ArgumentCountError: Too few arguments to function App\Controllers\Habitacion::editar(), 0 passed in C:\xampp\htdocs\sistema-hotel\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: GET, Route: habitacion/editar]
+in APPPATH\Controllers\Habitacion.php on line 53.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Habitacion->editar()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Habitacion))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-04 19:43:56 --> ErrorException: Cannot redeclare App\Controllers\Habitacion::index()
+[Method: GET, Route: habitacion]
+in APPPATH\Controllers\Habitacion.php on line 28.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-09-04 20:14:59 --> ErrorException: Cannot redeclare App\Controllers\Habitacion::index()
+[Method: GET, Route: habitacion]
+in APPPATH\Controllers\Habitacion.php on line 28.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()

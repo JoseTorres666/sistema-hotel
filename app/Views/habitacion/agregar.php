@@ -26,14 +26,19 @@
                         <label for="estado">Estado</label>
                         <select class="form-control" id="estado" name="estado" required>
                             <option value="1">Disponible</option>
-                            <option value="0">Ocupada</option>
+                            <option value="2">Ocupada</option>
+                            <option value="3">Limpieza</option>
+                            <option value="4">En Mantenimiento</option>
+                            <option value="5">Reservada</option>
                         </select>
                     </div>
+
+                   
                 </div>
             </div>
             <div class="form-group">
                 <button type="submit" class="btn btn-primary">Agregar</button>
-                <a href="<?php echo base_url('habitacion'); ?>" class="btn btn-danger">Cancelar</a>
+                <a href="<?php echo base_url('habitacion/accion'); ?>" class="btn btn-danger">Cancelar</a>
             </div>
             <?php echo form_close(); ?>
         </div>

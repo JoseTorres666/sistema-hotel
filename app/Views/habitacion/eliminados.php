@@ -4,7 +4,7 @@
         <div class="card-box table-responsive">
             <h1 class="header-title">Lista de Habitaciones Eliminadas</h1><br>
             <div>
-                <a href="<?php echo base_url('habitacion'); ?>">
+                <a href="<?php echo base_url('habitacion/accion'); ?>">
                     <button type="button" class="btn btn-dark">Habitaciones Activas</button>
                 </a>
             </div>

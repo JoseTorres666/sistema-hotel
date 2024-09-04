@@ -23,6 +23,7 @@ $user_session = $session_user->get();?>
         <link href="<?php echo base_url();?>/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" id="bootstrap-stylesheet" />
         <link href="<?php echo base_url();?>/assets/css/icons.min.css" rel="stylesheet" type="text/css" />
         <link href="<?php echo base_url();?>/assets/css/app.min.css" rel="stylesheet" type="text/css"  id="app-stylesheet" />
+        
 
     </head>
 
@@ -112,51 +113,64 @@ $user_session = $session_user->get();?>
                     <!--- Sidemenu -->
                     <div id="sidebar-menu">
 
-                        <ul class="metismenu" id="side-menu">
-                            <li>
-                                <a href="javascript: void(0);">
-                                    <i class="fe-sidebar"></i>
-                                    <span>  Layouts </span>
-                                    <span class="menu-arrow"></span>
-                                </a>
-                                <ul class="nav-second-level" aria-expanded="false">
-                                    <li><a href="layouts-horizontal.html">Horizontal</a></li>
-                                    <li><a href="layouts-menucollapsed.html">Menu Collapsed</a></li>
-                                    <li><a href="layouts-light-sidebar.html">Light Sidebar</a></li>
-                                    <li><a href="layouts-small-sidebar.html">Small Sidebar</a></li>
-                                    <li><a href="layouts-boxed.html">Boxed</a></li>
-                                </ul>
-                            </li>
+                    <ul class="metismenu" id="side-menu">
+                        <li>
+                            <a href="javascript: void(0);">
+                                <i class="mdi mdi-calendar-month" style="font-size: 30px;"></i>
+                                <span>Reserva</span>
+                            </a>
+                        </li>
 
-                            <li>
-                                <a href="<?php echo base_url();?>/usuario">
-                                    <i class="  mdi mdi-account-group"style="font-size: 30px;"></i>
-                                    <span> Usuarios </span>
-                                </a>
-                            </li>
+                        <li>
+                            <a href="<?php echo base_url();?>habitacion">
+                                <i class="mdi mdi-exit-to-app" style="font-size: 30px;"></i>
+                                <span>Recepcion</span>
+                            </a>
+                        </li>
 
-                            <li>
-                                <a href="<?php echo base_url();?>/producto">
-                                    <i class=" mdi mdi-cart"style="font-size: 30px;"></i> 
-                                    <span> Productos </span>
-                                </a>
-                            </li>
+                        <li>
+                            <a href="javascript: void(0);">
+                                <i class="mdi mdi-cart" style="font-size: 30px;"></i>
+                                <span>Punto de Venta</span>
+                            </a>
+                        </li>
 
-                            <li>
-                            <a href="<?php echo base_url();?>/huesped">
-                                <i class="mdi mdi-account-tie" style="font-size: 30px;"></i>
-                                    <span>huesped</span>
-                                </a>
-                            </li>
+                        <li>
+                            <a href="<?php echo base_url();?>usuario">
+                                <i class="mdi mdi-account-group" style="font-size: 30px;"></i>
+                                <span> Usuarios </span>
+                            </a>
+                        </li>
 
-                            <li>
-                                <a href="<?php echo base_url();?>/habitacion">
-                                    <i class="mdi mdi-bed-empty" style="font-size: 30px;"></i>
-                                    <span>Habitaciones</span>
-                                </a>
-                            </li>
-                
-                        </ul>
+                        <li>
+                            <a href="<?php echo base_url();?>huesped">
+                                <i class="mdi mdi-account-group" style="font-size: 30px;"></i>
+                                <span> Huesped </span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="<?php echo base_url();?>producto">
+                                <i class="mdi mdi-basket" style="font-size: 30px;"></i> 
+                                <span> Productos </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript: void(0);">
+                                <i class="mdi mdi-bed-empty" style="font-size: 30px;"></i>
+                                <span>Habitaciones</span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <ul class="nav-second-level" aria-expanded="false">
+                                <li><a href="<?php echo base_url();?>habitacion/agregar">Agregar</a></li>
+                                <li><a href="<?php echo base_url();?>habitacion/accion">Editar/Eliminar</a></li>
+                            </ul>
+                        </li>
+
+
+
+                    </ul>
+
 
                     </div>
                     <!-- End Sidebar -->

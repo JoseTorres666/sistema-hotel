@@ -17,12 +17,30 @@ class Habitacion extends BaseController
     public function index()
     {
         // Obtener habitaciones (puedes modificar la lógica según lo que necesites)
-        $habitaciones = $this->habitacionModel->findAll(); 
+        $habitaciones = $this->habitacionModel->where('estado !=', 0)->findAll();
 
         $data['habitaciones'] = $habitaciones;
         
         echo view('template/header'); 
         echo view('habitacion/listar', $data);
+        echo view('template/footer');
+    }
+    public function estancia()
+    {
+       
+        echo view('template/header'); 
+        echo view('habitacion/estancia');
+        echo view('template/footer');
+    }
+    public function accion()
+    {
+        // Obtener habitaciones (puedes modificar la lógica según lo que necesites)
+        $habitaciones = $this->habitacionModel->where('estado !=', 0)->findAll();
+
+        $data['habitaciones'] = $habitaciones;
+        
+        echo view('template/header'); 
+        echo view('habitacion/accion', $data);
         echo view('template/footer');
     }
 
@@ -71,14 +89,15 @@ class Habitacion extends BaseController
             'numero' => strtoupper($this->request->getPost('numero')),
             'precio' => $this->request->getPost('precio'),
             'piso' => strtoupper($this->request->getPost('piso')),
-            'categoria' => strtoupper($this->request->getPost('categoria'))
+            'categoria' => strtoupper($this->request->getPost('categoria')),
+            'estado' => $this->request->getPost('estado')
         ];
 
         // Actualizar habitación
         $this->habitacionModel->update($idHabitacion, $habitacionData);
 
         // Redireccionar con éxito
-        return redirect()->to(base_url('habitacion'));
+        return redirect()->to(base_url('habitacion/accion'));
     }
 
     public function eliminarbd($id)
