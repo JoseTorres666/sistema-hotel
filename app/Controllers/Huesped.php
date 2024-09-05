@@ -14,112 +14,88 @@ class Huesped extends BaseController
         $this->huespedModel = new HuespedModel();
     }
 
+    // Método privado para cargar vistas comunes
+    private function cargarVistas($vista, $data = [])
+    {
+        echo view('template/header');
+        echo view($vista, $data);
+        echo view('template/footer');
+    }
+
+    // Método privado para transformar los datos del huésped
+    private function transformarDatosHuesped($datos)
+    {
+        return [
+            'nombres' => strtoupper($datos['nombres']),
+            'apellidos' => strtoupper($datos['apellidos']),
+            'nacionalidad' => strtoupper($datos['nacionalidad']),
+            'fecha_nacimiento' => $datos['fecha_nacimiento'],
+            'estado_civil' => strtoupper($datos['estado_civil']),
+            'profesion' => strtoupper($datos['profesion']),
+            'tipo_documento' => strtoupper($datos['tipo_documento']),
+            'numero_documento' => $datos['numero_documento'],
+            'procedencia' => strtoupper($datos['procedencia']),
+        ];
+    }
+
     public function index()
     {
-        $huespedes = $this->huespedModel->getHuespedesConEdad();
-        
-        $data['huespedes'] = $huespedes;
-        
-        echo view('template/header'); 
-        echo view('huesped/listar', $data);
-        echo view('template/footer');
+        $data['huespedes'] = $this->huespedModel->getHuespedesConEdad();
+        $data['message'] = session()->getFlashdata('message'); // Añadir el mensaje a la vista
+        $this->cargarVistas('huesped/listar', $data);
     }
 
     public function agregar()
     {
-        echo view('template/header'); 
-        echo view('huesped/agregar');
-        echo view('template/footer');
+        $this->cargarVistas('huesped/agregar');
     }
 
     public function agregarbd()
     {
-        // Datos del huésped transformados a mayúsculas
-        $huespedData = [
-            'nombres' => strtoupper($this->request->getPost('nombres')),
-            'apellidos' => strtoupper($this->request->getPost('apellidos')),
-            'nacionalidad' => strtoupper($this->request->getPost('nacionalidad')),
-            'fecha_nacimiento' => $this->request->getPost('fecha_nacimiento'),
-            'estado_civil' => strtoupper($this->request->getPost('estado_civil')),
-            'profesion' => strtoupper($this->request->getPost('profesion')),
-            'tipo_documento' => strtoupper($this->request->getPost('tipo_documento')),
-            'numero_documento' => $this->request->getPost('numero_documento'),
-            'procedencia' => strtoupper($this->request->getPost('procedencia')),
-        ];
-
-        // Guardar huésped
+        $huespedData = $this->transformarDatosHuesped($this->request->getPost());
         $this->huespedModel->save($huespedData);
 
-        // Redireccionar con éxito
-        return redirect()->to(base_url('huesped'));
+        // Establecer mensaje de éxito
+        return redirect()->to(base_url('huesped'))->with('message', 'Huésped agregado exitosamente');
     }
 
     public function editar($id)
     {
-        // Encontrar el huésped por ID
-        $huesped = $this->huespedModel->find($id);
-        $data['huesped'] = $huesped; // Mantén la clave como 'huesped'
-
-        echo view('template/header'); 
-        echo view('huesped/editar', $data);
-        echo view('template/footer');
+        $data['huesped'] = $this->huespedModel->find($id);
+        $this->cargarVistas('huesped/editar', $data);
     }
 
     public function actualizarbd()
     {
-        // Obtener el ID del huésped
         $idHuesped = $this->request->getPost('id');
+        $huespedData = $this->transformarDatosHuesped($this->request->getPost());
 
-        // Datos del huésped transformados a mayúsculas
-        $huespedData = [
-            'nombres' => strtoupper($this->request->getPost('nombres')),
-            'apellidos' => strtoupper($this->request->getPost('apellidos')),
-            'nacionalidad' => strtoupper($this->request->getPost('nacionalidad')),
-            'fecha_nacimiento' => $this->request->getPost('fecha_nacimiento'),
-            'estado_civil' => strtoupper($this->request->getPost('estado_civil')),
-            'profesion' => strtoupper($this->request->getPost('profesion')),
-            'tipo_documento' => strtoupper($this->request->getPost('tipo_documento')),
-            'numero_documento' => $this->request->getPost('numero_documento'),
-            'procedencia' => strtoupper($this->request->getPost('procedencia')),
-        ];
-
-        // Actualizar huésped
         $this->huespedModel->update($idHuesped, $huespedData);
 
-        // Redireccionar con éxito
-        return redirect()->to(base_url('huesped'));
+        // Establecer mensaje de éxito
+        return redirect()->to(base_url('huesped'))->with('message', 'Huésped actualizado exitosamente');
     }
 
     public function eliminarbd($id)
     {
-        // Borrado lógico
         $this->huespedModel->update($id, ['estado' => 0]);
 
-        // Redireccionar con éxito
+        // Establecer mensaje de éxito
         return redirect()->to(base_url('huesped'))->with('message', 'Huésped eliminado exitosamente');
     }
 
-
     public function eliminados()
     {
-        $huespedes = $this->huespedModel->getHuespedesInactivosConEdad();
-        $data['huespedes'] = $huespedes;
-
-        echo view('template/header');
-        echo view('huesped/eliminados', $data);
-        echo view('template/footer');
+        $data['huespedes'] = $this->huespedModel->getHuespedesInactivosConEdad();
+        $data['message'] = session()->getFlashdata('message'); // Añadir el mensaje a la vista
+        $this->cargarVistas('huesped/eliminados', $data);
     }
-
-
-
 
     public function integrar($id)
     {
-        // Restaurar huésped
         $this->huespedModel->update($id, ['estado' => 1]);
 
-        // Redireccionar con éxito
+        // Establecer mensaje de éxito
         return redirect()->to(base_url('huesped/eliminados'))->with('message', 'Huésped restaurado exitosamente');
     }
-
 }

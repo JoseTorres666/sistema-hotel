@@ -17,7 +17,11 @@ class Habitacion extends BaseController
     public function index()
     {
         // Obtener habitaciones (puedes modificar la lógica según lo que necesites)
-        $habitaciones = $this->habitacionModel->where('estado !=', 0)->findAll();
+        $habitaciones = $this->habitacionModel
+                     ->where('estado !=', 0)
+                     ->orderBy('numero', 'ASC') // Ordena por el campo 'numero' en orden ascendente
+                     ->findAll();
+
 
         $data['habitaciones'] = $habitaciones;
         
@@ -35,7 +39,11 @@ class Habitacion extends BaseController
     public function accion()
     {
         // Obtener habitaciones (puedes modificar la lógica según lo que necesites)
-        $habitaciones = $this->habitacionModel->where('estado !=', 0)->findAll();
+        $habitaciones = $this->habitacionModel
+                     ->where('estado !=', 0)
+                     ->orderBy('numero', 'ASC') // Ordena por el campo 'numero' en orden ascendente
+                     ->findAll();
+
 
         $data['habitaciones'] = $habitaciones;
         

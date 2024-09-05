@@ -1,58 +1,60 @@
 <!-- inicio contenido -->
 <div class="container-fluid">
     <div class="row">
-        <div class="card-box table-responsive">
-            <h1 class="header-title">Lista de Huéspedes Eliminados</h1><br>
-            <div>
-                <a href="<?php echo base_url('huesped'); ?>">
-                    <button type="button" class="btn btn-dark">Huéspedes Activos</button>
-                </a>
-            </div>
-            <br>
-            <table id="datatable-buttons" class="table table-bordered table-striped text-center" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
-                <thead>
-                        <tr>
-                            <th>N°</th>
-                            <th>Nombres</th>
-                            <th>Apellidos</th>
-                            <th>Nacionalidad</th>
-                            <th>Edad</th>
-                            <th>Estado civil</th>
-                            <th>Profesión</th>
-                            <th>Tipo de documento</th>
-                            <th>Número de documento</th>
-                            <th>Procedencia</th>
-                            <th>Integrar</th>
-                        </tr>
-                    </thead>
-                <tbody>
-                  <?php
-                  $contador = 1;
-                  foreach ($huespedes as $huesped) { ?>
-                  <tr>
-                      <td><?php echo $contador; ?></td>
-                      <td><?php echo $huesped['nombres']; ?></td>
-                      <td><?php echo $huesped['apellidos']; ?></td>
-                      <td><?php echo $huesped['nacionalidad']; ?></td>
-                      <td><?php echo $huesped['edad']; ?></td>
-                      <td><?php echo $huesped['estado_civil']; ?></td>
-                      <td><?php echo $huesped['profesion']; ?></td>
-                      <td><?php echo $huesped['tipo_documento']; ?></td>
-                      <td><?php echo $huesped['numero_documento']; ?></td>
-                      <td><?php echo $huesped['procedencia']; ?></td>
-                      <td>
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h1 class="header-title">Lista de Huéspedes Eliminados</h1>
+                </div>
+                <div class="card-body">
+                    <div class="mb-3">
+                        <a href="<?php echo base_url('huesped'); ?>" class="btn btn-dark">
+                            Huéspedes Activos
+                        </a>
+                    </div>
+                    <!-- Mensaje de éxito -->
+                    <?php if (session()->getFlashdata('message')) : ?>
+                    <div class="alert alert-success">
+                      <?= session()->getFlashdata('message') ?>
+                    </div>
+                      <?php endif; ?>
+                    
+                    <div class="table-responsive">
+                        <table id="datatable-buttons" class="table table-bordered table-striped text-center" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
+                            <thead>
+                                <tr>
+                                    <th>N°</th>
+                                    <th>Nombres</th>
+                                    <th>Apellidos</th>
+                                    <th>Nacionalidad</th>
+                                    <th>Edad</th>
+                                    <th>Número de Documento</th>
+                                    <th>Integrar</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php
+                                $contador = 1;
+                                foreach ($huespedes as $huesped) { ?>
+                                <tr>
+                                    <td><?php echo $contador; ?></td>
+                                    <td><?php echo $huesped['nombres']; ?></td>
+                                    <td><?php echo $huesped['apellidos']; ?></td>
+                                    <td><?php echo $huesped['nacionalidad']; ?></td>
+                                    <td><?php echo $huesped['edad']; ?></td>
+                                    <td><?php echo $huesped['numero_documento']; ?></td>
+                                    <td>
                           <a href="#" data-href="<?php echo base_url('huesped/integrar/'.$huesped['id']); ?>" 
                             data-toggle="modal" data-target="#modal-confirma" data-placement="top" 
-                            title="Eliminar Registro" class="btn btn-purple">
+                            title="Reingresar Registro" class="btn btn-purple">
                             <i class="mdi mdi-recycle"style="font-size: 20px"></i>
                           </a>
-                      </td>
-                  </tr>
-                  <?php
-                  $contador++;
-                  } ?>
-              </tbody>
-
+                        </td>
+                    </tr>
+                    <?php
+                    $contador++;
+                    } ?>
+                </tbody>
             </table>
         </div>
     </div><!-- end row -->
@@ -60,11 +62,11 @@
 <!-- fin contenido -->
 
 <!-- Modal -->
-<div class="modal fade" id="modal-confirma" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+<div class="modal fade" id="modal-confirma" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="modalLabel">Reingresar Huésped</h5>
+        <h5 class="modal-title" id="exampleModalLongTitle">Reingresar Huésped</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -73,7 +75,7 @@
         <p>¿Estás seguro de reingresar a este huésped?</p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
         <a class="btn btn-primary btn-ok">Sí</a>
       </div>
     </div>

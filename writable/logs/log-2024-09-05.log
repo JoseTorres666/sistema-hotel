@@ -1,0 +1,37 @@
+CRITICAL - 2024-09-05 15:20:13 --> Error: Call to undefined method App\Controllers\Huesped::cargarVistas()
+[Method: GET, Route: huesped]
+in APPPATH\Controllers\Huesped.php on line 20.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Huesped->index()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Huesped))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-05 15:49:38 --> ErrorException: Undefined variable $producto
+[Method: GET, Route: huesped/eliminados]
+in APPPATH\Views\huesped\eliminados.php on line 41.
+ 1 APPPATH\Views\huesped\eliminados.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $producto', 'C:\\xampp\\htdocs\\sistema-hotel\\app\\Views\\huesped\\eliminados.php', 41)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\sistema-hotel\\app\\Views\\huesped\\eliminados.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('huesped/eliminados', [], true)
+ 5 APPPATH\Controllers\Huesped.php(21): view('huesped/eliminados', [...])
+ 6 APPPATH\Controllers\Huesped.php(91): App\Controllers\Huesped->cargarVistas('huesped/eliminados', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Huesped->eliminados()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Huesped))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-05 15:53:56 --> ParseError: Unclosed '{' on line 42
+[Method: GET, Route: huesped/eliminados]
+in APPPATH\Views\huesped\eliminados.php on line 50.
+ 1 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('huesped/eliminados', [], true)
+ 3 APPPATH\Controllers\Huesped.php(21): view('huesped/eliminados', [...])
+ 4 APPPATH\Controllers\Huesped.php(91): App\Controllers\Huesped->cargarVistas('huesped/eliminados', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Huesped->eliminados()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Huesped))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

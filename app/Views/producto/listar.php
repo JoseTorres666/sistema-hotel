@@ -23,10 +23,8 @@
                         <th>Nombre</th>
                         <th>Descripcion</th>
                         <th>Precio de Compra</th>
-                        <!--<th>Precio de Venta</th>-->
                         <th>Stock</th>
-                        <th>Modificar</th>
-                        <th>Eliminar</th>
+                        <th>Accion</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -49,8 +47,6 @@
                             <a href="<?php echo base_url('producto/editar/'.$producto['id']); ?>" class="btn btn-warning">
                               <i class=" mdi mdi-eyedropper" style="font-size: 20px;"></i>
                             </a>
-                        </td>
-                        <td>
                           <a href="#" data-href="<?php echo base_url('producto/eliminarbd/'.$producto['id']); ?>" 
                             data-toggle="modal" data-target="#modal-confirma" data-placement="top" 
                             title="Eliminar Registro" class="btn btn-danger btn-delete">
