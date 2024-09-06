@@ -26,6 +26,10 @@
                         <input class="form-control" id="categoria" name="categoria" type="text" value="<?php echo htmlspecialchars($habitacion['categoria']); ?>" required>
                     </div>
                     <div class="col-12 col-sm-6">
+                        <label for="descripcion">Descripcion</label>
+                        <input class="form-control" id="descripcion" name="descripcion" type="text" value="<?php echo htmlspecialchars($habitacion['descripcion']); ?>" required>
+                    </div>
+                    <div class="col-12 col-sm-6">
                         <label for="estado">Estado</label>
                         <select class="form-control" id="estado" name="estado" required>
                             <option value="1" <?php echo ($habitacion['estado'] == 1) ? 'selected' : ''; ?>>Disponible</option>

@@ -85,20 +85,7 @@ $user_session = $session_user->get();?>
                         </button>
                     </li>
 
-                    <li class="d-none d-sm-block">
-                            <form class="app-search">
-                                <div class="app-search-box">
-                                    <div class="input-group">
-                                        <input type="text" class="form-control" placeholder="Buscar...">
-                                        <div class="input-group-append">
-                                            <button class="btn" type="submit">
-                                                <i class="fe-search"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
-                        </li>
+                    
 
                 </ul>
             </div>
@@ -163,7 +150,7 @@ $user_session = $session_user->get();?>
                             </a>
                             <ul class="nav-second-level" aria-expanded="false">
                                 <li><a href="<?php echo base_url();?>habitacion/agregar">Agregar</a></li>
-                                <li><a href="<?php echo base_url();?>habitacion/accion">Editar/Eliminar</a></li>
+                                <li><a href="<?php echo base_url();?>habitacion/listar">Editar/Eliminar</a></li>
                             </ul>
                         </li>
 
@@ -190,3 +177,44 @@ $user_session = $session_user->get();?>
             <div class="content-page">
                 <!-- Fin del contenido -->
                  
+                <style>
+
+
+
+/* Columnas ajustadas al contenido */
+td {
+    width: auto; /* Se ajusta al tamaño del contenido */
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    width: auto; /* Se ajusta al tamaño del contenido */
+}
+
+/* Botones ajustables */
+.btn {
+    padding: 8px 10px; /* Tamaño de los botones reducido */
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-warning {
+    background-color: #ffc107;
+    color: black;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    color: white;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    text-align: center; /* Centra el texto de los títulos */
+}
+
+</style>

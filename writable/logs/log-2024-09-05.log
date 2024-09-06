@@ -35,3 +35,95 @@ in APPPATH\Views\huesped\eliminados.php on line 50.
  8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-05 16:04:36 --> ParseError: Unmatched '}'
+[Method: GET, Route: huesped]
+in APPPATH\Views\huesped\listar.php on line 57.
+ 1 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('huesped/listar', [], true)
+ 3 APPPATH\Controllers\Huesped.php(21): view('huesped/listar', [...])
+ 4 APPPATH\Controllers\Huesped.php(45): App\Controllers\Huesped->cargarVistas('huesped/listar', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Huesped->index()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Huesped))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-05 16:07:29 --> ParseError: Unmatched '}'
+[Method: GET, Route: huesped]
+in APPPATH\Views\huesped\listar.php on line 57.
+ 1 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('huesped/listar', [], true)
+ 3 APPPATH\Controllers\Huesped.php(21): view('huesped/listar', [...])
+ 4 APPPATH\Controllers\Huesped.php(45): App\Controllers\Huesped->cargarVistas('huesped/listar', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Huesped->index()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Huesped))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-05 18:40:58 --> ErrorException: Undefined variable $contador
+[Method: GET, Route: habitacion/accion]
+in APPPATH\Views\habitacion\accion.php on line 62.
+ 1 APPPATH\Views\habitacion\accion.php(62): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $contador', 'C:\\xampp\\htdocs\\sistema-hotel\\app\\Views\\habitacion\\accion.php', 62)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\sistema-hotel\\app\\Views\\habitacion\\accion.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('habitacion/accion', [], true)
+ 5 APPPATH\Controllers\Habitacion.php(51): view('habitacion/accion', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Habitacion->accion()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Habitacion))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-05 18:46:42 --> ParseError: syntax error, unexpected single-quoted string ", ", expecting "]"
+[Method: GET, Route: habitacion/accion]
+in APPPATH\Models\HabitacionModel.php on line 12.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\sistema-hotel\\app\\Models\\HabitacionModel.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\HabitacionModel')
+ 3 APPPATH\Controllers\Habitacion.php(14): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\HabitacionModel')
+ 4 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Habitacion->__construct()
+ 5 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-05 19:07:35 --> ErrorException: Undefined variable $estado
+[Method: GET, Route: habitacion/accion]
+in APPPATH\Views\habitacion\accion.php on line 111.
+ 1 APPPATH\Views\habitacion\accion.php(111): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $estado', 'C:\\xampp\\htdocs\\sistema-hotel\\app\\Views\\habitacion\\accion.php', 111)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\sistema-hotel\\app\\Views\\habitacion\\accion.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('habitacion/accion', [], true)
+ 5 APPPATH\Controllers\Habitacion.php(51): view('habitacion/accion', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Habitacion->accion()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Habitacion))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-05 19:07:39 --> ErrorException: Undefined variable $estado
+[Method: GET, Route: habitacion/accion]
+in APPPATH\Views\habitacion\accion.php on line 111.
+ 1 APPPATH\Views\habitacion\accion.php(111): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $estado', 'C:\\xampp\\htdocs\\sistema-hotel\\app\\Views\\habitacion\\accion.php', 111)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\sistema-hotel\\app\\Views\\habitacion\\accion.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('habitacion/accion', [], true)
+ 5 APPPATH\Controllers\Habitacion.php(51): view('habitacion/accion', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Habitacion->accion()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Habitacion))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-05 19:25:19 --> ParseError: syntax error, unexpected token "."
+[Method: GET, Route: habitacion/accion]
+in APPPATH\Views\habitacion\accion.php on line 48.
+ 1 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('habitacion/accion', [], true)
+ 3 APPPATH\Controllers\Habitacion.php(51): view('habitacion/accion', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Habitacion->accion()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Habitacion))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

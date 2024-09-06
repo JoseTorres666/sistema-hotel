@@ -1,148 +1,91 @@
-<style>
-    .grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 10px;
-    justify-content: center;
-    margin-top: 20px;
-    }
 
-    .habitacion-card {
-        color: white;
-        border-radius: 10px;
-        padding: 10px;
-        position: relative;
-        text-align: center;
-    }
-
-    .habitacion-card.disponible {
-        background-color: #28a745;
-    }
-
-    .habitacion-card.ocupado {
-        background-color: #dc3545;
-    }
-
-    .habitacion-card.limpieza {
-        background-color: #17a2b8;
-    }
-
-    .habitacion-card.mantenimiento {
-        background-color: #ffc107;
-        color: black;
-    }
-
-    .habitacion-card h3 {
-        font-size: 1.2em;
-        margin: 10px 0;
-    }
-
-    .habitacion-card p {
-        font-size: 0.9em;
-        margin: 5px 0;
-    }
-
-    .habitacion-card .icon {
-        font-size: 1.5em;
-        margin: 10px 0;
-    }
-
-    .habitacion-card a {
-        color: inherit;
-        text-decoration: none;
-        position: absolute;
-        bottom: 10px;
-        right: 10px;
-    }
-
-    .estado-container {
-        display: flex;
-        gap: 20px;
-    }
-
-    .estado-item {
-        display: flex;
-        align-items: center;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        padding: 5px 10px;
-        font-size: 14px;
-        color: #333;
-    }
-
-    .estado-item i {
-        margin-right: 5px;
-    }
-
-    .estado-item.mantenimiento {
-        color: #ffa500;
-        border-color: #ffa500;
-    }
-
-    .estado-item.disponible {
-        color: #28a745;
-        border-color: #28a745;
-    }
-
-    .estado-item.limpieza {
-        color: #17a2b8;
-        border-color: #17a2b8;
-    }
-
-    .estado-item.ocupado {
-        color: #dc3545;
-        border-color: #dc3545;
-    }
-
-</style>
-
-
+<?php 
+$estados = [
+    0 => ['class' => 'eliminado', 'texto' => 'Eliminado'],
+    1 => ['class' => 'disponible', 'texto' => 'Disponible'],
+    2 => ['class' => 'limpieza', 'texto' => 'Limpieza'],
+    3 => ['class' => 'ocupado', 'texto' => 'Ocupado'],
+    4 => ['class' => 'mantenimiento', 'texto' => 'Mantenimiento'],
+    5 => ['class' => 'reservado', 'texto' => 'Reservado'],
+];
+?>
 
 <div class="container-fluid">
-    <h2>Listado de habitaciones</h2>
-    
-    <!-- Estado de habitaciones -->
-    <div class="estado-container">
-        <div class="estado-item disponible">
-            <i class="fas fa-check-circle"></i>
-            Disponible
-        </div>
-        <div class="estado-item limpieza">
-            <i class="fas fa-broom"></i>
-            Limpieza
-        </div>
-        <div class="estado-item ocupado">
-            <i class="fas fa-times-circle"></i>
-            Ocupado
-        </div>
-        <div class="estado-item mantenimiento">
-            <i class="fas fa-tools"></i>
-            Mantenimiento
-        </div>
-    </div>
-    
-    <!-- Tarjetas de habitaciones -->
-    <div class="grid-container">
-        <?php 
-        $estados = [
-            1 => ['class' => 'disponible', 'texto' => 'Disponible'],
-            2 => ['class' => 'ocupado', 'texto' => 'Ocupado'],
-            3 => ['class' => 'limpieza', 'texto' => 'Limpieza'],
-            4 => ['class' => 'mantenimiento', 'texto' => 'Mantenimiento'],
-        ];
-        
-        foreach ($habitaciones as $habitacion): 
-            $estado = $estados[$habitacion['estado']] ?? ['class' => 'desconocido', 'texto' => 'Desconocido'];
-        ?>
-            <div class="habitacion-card <?php echo $estado['class']; ?>">
-                <h3>Habitación <?php echo $habitacion['numero']; ?></h3>
-                <h3> <?php echo $habitacion['categoria']; ?></h3>
-                <p><?php echo $estado['texto']; ?></p>
-                <i class="fas fa-bed icon"></i>
-                <a href="<?php echo base_url('habitacion/estancia/'.$habitacion['id']); ?>">
-                    <i class="fas fa-arrow-circle-right"></i>
+    <div class="row">
+        <div class="card-box table-responsive">
+            <h1 class="header-title">Lista de habitaciones</h1>
+            <br>
+            <div>
+                <a href="<?php echo base_url('habitacion/agregar'); ?>">
+                    <button type="button" class="btn btn-primary">Agregar habitación</button>
+                </a>
+                <a href="<?php echo base_url('habitacion/eliminados'); ?>">
+                    <button type="button" class="btn btn-dark">Habitaciones eliminadas</button>
                 </a>
             </div>
-        <?php endforeach; ?>
+            <br>
+
+            <table id="datatable-buttons" class="table table-bordered table-striped text-center" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
+                <thead>
+                    <tr>
+                        <th>Número</th>
+                        <th>Precio</th>
+                        <th>Piso</th>
+                        <th>Categoría</th>
+                        <th>Descripción</th>
+                        <th>Estado</th>
+                        <th>Acción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+                    foreach ($habitaciones as $habitacion) {
+                        // Obtener el estado actual, con un valor por defecto si no coincide
+                        $estado = $estados[$habitacion['estado']] ?? ['class' => 'desconocido', 'texto' => 'Desconocido'];
+                    ?>
+                    <tr>
+                        <td><?php echo htmlspecialchars($habitacion['numero']); ?></td>
+                        <td><?php echo htmlspecialchars($habitacion['precio']); ?></td>
+                        <td><?php echo htmlspecialchars($habitacion['piso']); ?></td>
+                        <td><?php echo htmlspecialchars($habitacion['categoria']); ?></td>
+                        <td><?php echo htmlspecialchars($habitacion['descripcion']); ?></td>
+                        <td class="<?php echo $estado['class']; ?>"><?php echo htmlspecialchars($estado['texto']); ?></td>
+                        <td>
+                            <a href="<?php echo base_url('habitacion/editar/'.$habitacion['id']); ?>" class="btn btn-warning" aria-label="Editar">
+                                <i class="mdi mdi-eyedropper" style="font-size: 20px;"></i>
+                            </a>
+                            <a href="#" data-href="<?php echo base_url('habitacion/eliminarbd/'.$habitacion['id']); ?>" 
+                              data-toggle="modal" data-target="#modal-confirma" data-placement="top" 
+                              title="Eliminar Registro" class="btn btn-danger" aria-label="Eliminar">
+                                <i class="mdi mdi-delete" style="font-size: 20px;"></i>
+                            </a>
+                        </td>
+                    </tr>
+                    <?php
+                    } ?>
+                </tbody>
+            </table>
+        </div>
     </div>
+</div>
+
+<!-- Modal de Confirmación de Eliminación -->
+<div class="modal fade" id="modal-confirma" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalLabel">Eliminar Registro</h5>
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>¿Estás seguro de eliminar este registro?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <a href="#" class="btn btn-danger btn-ok">Eliminar</a>
+      </div>
+    </div>
+  </div>
 </div>

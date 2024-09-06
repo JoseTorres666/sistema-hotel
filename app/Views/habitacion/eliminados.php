@@ -17,8 +17,7 @@
                         <th>Precio</th>
                         <th>Piso</th>
                         <th>Categoría</th>
-                        <th>Fecha Registro</th>
-                        <th>Fecha Actualización</th>
+                        <th>Descripcion</th>
                         <th>Integrar</th>
                     </tr>
                 </thead>
@@ -32,8 +31,7 @@
                         <td><?php echo $habitacion['precio']; ?></td>
                         <td><?php echo $habitacion['piso']; ?></td>
                         <td><?php echo $habitacion['categoria']; ?></td>
-                        <td><?php echo $habitacion['fecha_registro']; ?></td>
-                        <td><?php echo $habitacion['fecha_actualizacion']; ?></td>
+                        <td><?php echo $habitacion['descripcion']; ?></td>
                         <td>
                             <a href="#" data-href="<?php echo base_url('habitacion/integrar/'.$habitacion['id']); ?>" 
                                data-toggle="modal" data-target="#modal-confirma" 

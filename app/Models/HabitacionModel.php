@@ -9,7 +9,7 @@ class HabitacionModel extends Model
     protected $table = 'habitacion';
     protected $primaryKey = 'id';
     protected $allowedFields = [
-        'numero', 'precio', 'piso', 'categoria', 'estado', 'fecha_registro', 'fecha_actualizacion', 'id_usuario'
+        'numero', 'precio', 'piso', 'categoria', 'descripcion','estado', 'fecha_registro', 'fecha_actualizacion', 'id_usuario'
     ];
 
     protected $useTimestamps = true;

@@ -26,7 +26,7 @@ class Habitacion extends BaseController
         $data['habitaciones'] = $habitaciones;
         
         echo view('template/header'); 
-        echo view('habitacion/listar', $data);
+        echo view('habitacion/recepcion', $data);
         echo view('template/footer');
     }
     public function estancia()
@@ -36,7 +36,7 @@ class Habitacion extends BaseController
         echo view('habitacion/estancia');
         echo view('template/footer');
     }
-    public function accion()
+    public function listar()
     {
         // Obtener habitaciones (puedes modificar la lógica según lo que necesites)
         $habitaciones = $this->habitacionModel
@@ -48,7 +48,7 @@ class Habitacion extends BaseController
         $data['habitaciones'] = $habitaciones;
         
         echo view('template/header'); 
-        echo view('habitacion/accion', $data);
+        echo view('habitacion/listar', $data);
         echo view('template/footer');
     }
 
@@ -66,7 +66,8 @@ class Habitacion extends BaseController
             'numero' => strtoupper($this->request->getPost('numero')),
             'precio' => $this->request->getPost('precio'),
             'piso' => strtoupper($this->request->getPost('piso')),
-            'categoria' => strtoupper($this->request->getPost('categoria'))
+            'categoria' => strtoupper($this->request->getPost('categoria')),
+            'descripcion' => strtoupper($this->request->getPost('descripcion'))
         ];
 
         // Guardar habitación
@@ -98,6 +99,7 @@ class Habitacion extends BaseController
             'precio' => $this->request->getPost('precio'),
             'piso' => strtoupper($this->request->getPost('piso')),
             'categoria' => strtoupper($this->request->getPost('categoria')),
+            'descripcion' => strtoupper($this->request->getPost('descripcion')),
             'estado' => $this->request->getPost('estado')
         ];
 
