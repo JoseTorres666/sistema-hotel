@@ -55,15 +55,16 @@ DROP TABLE IF EXISTS `detalle_producto`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `detalle_producto` (
-  `producto_id` int NOT NULL,
-  `venta_idventa` int NOT NULL,
+  `id` int NOT NULL AUTO_INCREMENT,
+  `id_producto` int NOT NULL,
+  `id_venta` int NOT NULL,
   `catidad` int NOT NULL,
-  `precion_unitario` decimal(8,2) DEFAULT NULL,
-  PRIMARY KEY (`producto_id`,`venta_idventa`),
-  KEY `fk_producto_has_venta_venta1_idx` (`venta_idventa`),
-  KEY `fk_producto_has_venta_producto1_idx` (`producto_id`),
-  CONSTRAINT `fk_producto_has_venta_producto1` FOREIGN KEY (`producto_id`) REFERENCES `producto` (`id`),
-  CONSTRAINT `fk_producto_has_venta_venta1` FOREIGN KEY (`venta_idventa`) REFERENCES `venta` (`idventa`)
+  `fecha_registro` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  KEY `fk_producto_has_venta_venta1_idx` (`id_venta`),
+  KEY `fk_producto_has_venta_producto1_idx` (`id_producto`),
+  CONSTRAINT `fk_producto_has_venta_producto1` FOREIGN KEY (`id_producto`) REFERENCES `producto` (`id`),
+  CONSTRAINT `fk_producto_has_venta_venta1` FOREIGN KEY (`id_venta`) REFERENCES `venta` (`idventa`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -89,9 +90,9 @@ CREATE TABLE `estancia` (
   `id_huesped` int NOT NULL,
   `fecha_ingreso` datetime NOT NULL,
   `fecha_salida` datetime NOT NULL,
+  `descuento` decimal(8,2) DEFAULT NULL,
   `estado_estancia` varchar(50) NOT NULL,
   `observaciones` varchar(255) DEFAULT NULL,
-  `estado` tinyint GENERATED ALWAYS AS (_utf8mb3'1') VIRTUAL,
   `fecha_registro` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `fecha_actualizacion` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
@@ -120,16 +121,17 @@ DROP TABLE IF EXISTS `habitacion`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `habitacion` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `numero` varchar(4) NOT NULL,
+  `numero` varchar(10) NOT NULL,
   `precio` decimal(8,2) NOT NULL,
   `piso` varchar(45) NOT NULL,
   `categoria` varchar(50) NOT NULL,
+  `descripcion` varchar(255) DEFAULT NULL,
   `estado` tinyint NOT NULL DEFAULT '1',
   `fecha_registro` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   `fecha_actualizacion` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `id_usuario` int NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -138,6 +140,7 @@ CREATE TABLE `habitacion` (
 
 LOCK TABLES `habitacion` WRITE;
 /*!40000 ALTER TABLE `habitacion` DISABLE KEYS */;
+INSERT INTO `habitacion` VALUES (1,'12',130.00,'2','DOBLE',NULL,1,'2024-09-03 03:50:09','2024-09-05 00:39:50',0),(2,'11',145.00,'2','INDIVIDUAL',NULL,2,'2024-09-03 04:33:48','2024-09-05 00:35:26',0),(3,'1',280.00,'PB','CUATRUPLE','3 CAMAS',1,'2024-09-04 03:41:58','2024-09-05 23:28:25',0),(4,'2',85.00,'PB','INDIVIDUAL','CAMA INDIVIDUAL',3,'2024-09-04 23:02:42','2024-09-05 23:26:43',0),(5,'3',160.00,'PB','MATRIMODIAN','CAMA MATRIMONIAL',2,'2024-09-05 22:41:34','2024-09-05 23:26:59',0),(6,'15',85.00,'1','INDIVIDUAL','INDIVIDUAL',4,'2024-09-05 22:42:06','2024-09-05 23:27:34',0),(7,'17',180.00,'1','DOBE',NULL,1,'2024-09-05 22:42:27','2024-09-05 22:42:27',0),(8,'19',160.00,'1','MATRIMONIAL',NULL,1,'2024-09-05 22:42:50','2024-09-05 22:42:50',0);
 /*!40000 ALTER TABLE `habitacion` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -149,13 +152,13 @@ DROP TABLE IF EXISTS `habitacion_estancia`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `habitacion_estancia` (
-  `habitacion_id` int NOT NULL,
-  `estancia_id` int NOT NULL,
-  PRIMARY KEY (`habitacion_id`,`estancia_id`),
-  KEY `fk_habitacion_has_estancia_estancia1_idx` (`estancia_id`),
-  KEY `fk_habitacion_has_estancia_habitacion1_idx` (`habitacion_id`),
-  CONSTRAINT `fk_habitacion_has_estancia_estancia1` FOREIGN KEY (`estancia_id`) REFERENCES `estancia` (`id`),
-  CONSTRAINT `fk_habitacion_has_estancia_habitacion1` FOREIGN KEY (`habitacion_id`) REFERENCES `habitacion` (`id`)
+  `id_habitacion` int NOT NULL,
+  `id_estancia` int NOT NULL,
+  PRIMARY KEY (`id_habitacion`,`id_estancia`),
+  KEY `fk_habitacion_has_estancia_estancia1_idx` (`id_estancia`),
+  KEY `fk_habitacion_has_estancia_habitacion1_idx` (`id_habitacion`),
+  CONSTRAINT `fk_habitacion_has_estancia_estancia1` FOREIGN KEY (`id_estancia`) REFERENCES `estancia` (`id`),
+  CONSTRAINT `fk_habitacion_has_estancia_habitacion1` FOREIGN KEY (`id_habitacion`) REFERENCES `habitacion` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -191,7 +194,7 @@ CREATE TABLE `huesped` (
   `fecha_actualizacion` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `id_usuario` int NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -200,7 +203,7 @@ CREATE TABLE `huesped` (
 
 LOCK TABLES `huesped` WRITE;
 /*!40000 ALTER TABLE `huesped` DISABLE KEYS */;
-INSERT INTO `huesped` VALUES (1,'JOSE','TORRES','BOLIVIANA','1999-06-03 00:00:00','SOLTERO','ESTUDIANTE','CEDULA_IDENTIDAD','1234567890','COCHABAMBA',1,'2024-09-03 01:17:37','2024-09-03 01:17:37',0);
+INSERT INTO `huesped` VALUES (1,'JOSE','TORRES','BOLIVIANA','1999-06-03 00:00:00','SOLTERO','ESTUDIANTE','CEDULA_IDENTIDAD','1234567890','COCHABAMBA',1,'2024-09-03 01:17:37','2024-09-05 20:17:28',0),(2,'PEDRO','LOPEZ','BOLIVIANA','2023-02-01 00:00:00','SOLTERO','ESTUDIANTE','CEDULA_IDENTIDAD','1234567890','COCHABAMBA',1,'2024-09-04 03:44:20','2024-09-05 20:17:30',0),(3,'JUAN','PEREZ','CHILE','1999-06-03 00:00:00','SOLTERO','ESTUDIANTE','CEDULA_IDENTIDAD','1223','COCHABAMBA',1,'2024-09-05 19:24:21','2024-09-05 20:17:32',0),(4,'JUAN','FFD','ADASD','1988-12-12 00:00:00','SOLTERO','ESTUDIANTE','CEDULA_IDENTIDAD','1221321','COCHABAMBA',1,'2024-09-05 19:34:28','2024-09-05 20:17:35',0),(5,'DASDA','SADADAS','ADAS','1999-12-12 00:00:00','SOLTERO','ASDADA','CEDULA_IDENTIDAD','12231','WSDDSA',1,'2024-09-05 19:39:05','2024-09-05 20:17:39',0);
 /*!40000 ALTER TABLE `huesped` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -223,7 +226,7 @@ CREATE TABLE `producto` (
   `fecha_actualizacion` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `id_usuario` int DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=57 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=58 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -232,7 +235,7 @@ CREATE TABLE `producto` (
 
 LOCK TABLES `producto` WRITE;
 /*!40000 ALTER TABLE `producto` DISABLE KEYS */;
-INSERT INTO `producto` VALUES (55,'AAAA','SSS',0.00,2,1,'55.jpg','2024-09-03 01:14:32','2024-09-03 01:15:57',NULL),(56,'COCA','DE VIDRIO 1/2 L',12.00,4,1,'','2024-09-03 01:15:41','2024-09-03 01:15:41',NULL);
+INSERT INTO `producto` VALUES (55,'AAAA','SSS',0.00,2,1,'55.jpg','2024-09-03 01:14:32','2024-09-03 01:15:57',NULL),(56,'COCA','DE VIDRIO 1/2 L',12.00,4,1,'','2024-09-03 01:15:41','2024-09-03 01:15:41',NULL),(57,'PEPSI','DE MEDIO LITRO',13.00,2,1,'57.jpg','2024-09-04 03:45:56','2024-09-04 03:46:09',NULL);
 /*!40000 ALTER TABLE `producto` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -257,7 +260,7 @@ CREATE TABLE `usuario` (
   `fecha_actualizacion` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
   UNIQUE KEY `email_UNIQUE` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -266,7 +269,7 @@ CREATE TABLE `usuario` (
 
 LOCK TABLES `usuario` WRITE;
 /*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
-INSERT INTO `usuario` VALUES (29,'JOSE','TORRES','MAMANI','76415956','ADMINISTRADOR','torres.jose.13474@gmail.com','$2y$10$DXSxjXpvcb4HdRvdgergmOM.vtwOk3NIScuaj9ksC5JRil90orxM.',1,'2024-09-03 01:15:16','2024-09-03 01:15:16');
+INSERT INTO `usuario` VALUES (29,'JOSE','TORRES','MAMANI','76415956','ADMINISTRADOR','torres.jose.13474@gmail.com','$2y$10$DXSxjXpvcb4HdRvdgergmOM.vtwOk3NIScuaj9ksC5JRil90orxM.',1,'2024-09-03 01:15:16','2024-09-03 01:15:16'),(30,'RAUL','VERA','','2222222','RECEPCIONISTA','yhosu597@gmail.com','$2y$10$xvFBh4EwrrRmbfUkHJv2X.K6i1Td/Jo42l6Q6TvzbMWluUMG0VDlG',1,'2024-09-04 03:47:18','2024-09-04 03:49:07');
 /*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -281,8 +284,8 @@ CREATE TABLE `venta` (
   `idventa` int NOT NULL AUTO_INCREMENT,
   `id_estancia` int NOT NULL,
   `id_usuario` int NOT NULL,
-  `fecha` date NOT NULL,
   `total` decimal(8,2) NOT NULL,
+  `fecha_registro` date NOT NULL,
   PRIMARY KEY (`idventa`),
   KEY `fk_venta_estancia1_idx` (`id_estancia`),
   KEY `fk_venta_usuario1_idx` (`id_usuario`),
@@ -309,4 +312,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-09-02 17:19:02
+-- Dump completed on 2024-09-06 17:38:12
