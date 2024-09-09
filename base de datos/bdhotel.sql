@@ -152,9 +152,10 @@ DROP TABLE IF EXISTS `habitacion_estancia`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `habitacion_estancia` (
+  `id` int NOT NULL,
   `id_habitacion` int NOT NULL,
   `id_estancia` int NOT NULL,
-  PRIMARY KEY (`id_habitacion`,`id_estancia`),
+  PRIMARY KEY (`id`),
   KEY `fk_habitacion_has_estancia_estancia1_idx` (`id_estancia`),
   KEY `fk_habitacion_has_estancia_habitacion1_idx` (`id_habitacion`),
   CONSTRAINT `fk_habitacion_has_estancia_estancia1` FOREIGN KEY (`id_estancia`) REFERENCES `estancia` (`id`),
@@ -312,4 +313,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-09-06 17:38:12
+-- Dump completed on 2024-09-09 16:33:39
