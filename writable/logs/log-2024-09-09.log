@@ -1,0 +1,556 @@
+CRITICAL - 2024-09-09 15:40:41 --> Error: Class "App\Controllers\Controller" not found
+[Method: GET, Route: estancia]
+in APPPATH\Controllers\Estancia.php on line 10.
+ 1 SYSTEMPATH\Router\AutoRouter.php(147): include_once()
+ 2 SYSTEMPATH\Router\Router.php(563): CodeIgniter\Router\AutoRouter->getRoute('estancia', 'GET')
+ 3 SYSTEMPATH\Router\Router.php(228): CodeIgniter\Router\Router->autoRoute('estancia')
+ 4 SYSTEMPATH\CodeIgniter.php(834): CodeIgniter\Router\Router->handle('estancia')
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-09 15:47:18 --> Error: Class "App\Controllers\Controller" not found
+[Method: GET, Route: estancia]
+in APPPATH\Controllers\Estancia.php on line 10.
+ 1 SYSTEMPATH\Router\AutoRouter.php(147): include_once()
+ 2 SYSTEMPATH\Router\Router.php(563): CodeIgniter\Router\AutoRouter->getRoute('estancia', 'GET')
+ 3 SYSTEMPATH\Router\Router.php(228): CodeIgniter\Router\Router->autoRoute('estancia')
+ 4 SYSTEMPATH\CodeIgniter.php(834): CodeIgniter\Router\Router->handle('estancia')
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-09 15:47:39 --> Error: Class "App\Controllers\Controllers" not found
+[Method: GET, Route: estancia]
+in APPPATH\Controllers\Estancia.php on line 10.
+ 1 SYSTEMPATH\Router\AutoRouter.php(147): include_once()
+ 2 SYSTEMPATH\Router\Router.php(563): CodeIgniter\Router\AutoRouter->getRoute('estancia', 'GET')
+ 3 SYSTEMPATH\Router\Router.php(228): CodeIgniter\Router\Router->autoRoute('estancia')
+ 4 SYSTEMPATH\CodeIgniter.php(834): CodeIgniter\Router\Router->handle('estancia')
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-09 15:53:56 --> ErrorException: Undefined variable $habitaciones
+[Method: GET, Route: estancia]
+in APPPATH\Views\estancia\lista.php on line 134.
+ 1 APPPATH\Views\estancia\lista.php(134): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $habitaciones', 'C:\\xampp\\htdocs\\sistema-hotel\\app\\Views\\estancia\\lista.php', 134)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\sistema-hotel\\app\\Views\\estancia\\lista.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('estancia/lista', [], true)
+ 5 APPPATH\Controllers\Estancia.php(24): view('estancia/lista', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Estancia->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Estancia))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-09 15:54:01 --> ErrorException: Undefined variable $habitaciones
+[Method: GET, Route: estancia]
+in APPPATH\Views\estancia\lista.php on line 134.
+ 1 APPPATH\Views\estancia\lista.php(134): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $habitaciones', 'C:\\xampp\\htdocs\\sistema-hotel\\app\\Views\\estancia\\lista.php', 134)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\sistema-hotel\\app\\Views\\estancia\\lista.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('estancia/lista', [], true)
+ 5 APPPATH\Controllers\Estancia.php(24): view('estancia/lista', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Estancia->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Estancia))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-09 16:13:26 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "habitacion/estancia.php"
+[Method: GET, Route: habitacion/estancia/3]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('habitacion/estancia.php')
+ 2 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('habitacion/estancia', [], true)
+ 3 APPPATH\Controllers\Habitacion.php(36): view('habitacion/estancia')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Habitacion->estancia('3')
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Habitacion))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-09 16:15:24 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "habitacion/estancia.php"
+[Method: GET, Route: habitacion/estancia/3]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('habitacion/estancia.php')
+ 2 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('habitacion/estancia', [], true)
+ 3 APPPATH\Controllers\Habitacion.php(36): view('habitacion/estancia')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Habitacion->estancia('3')
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Habitacion))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-09 16:15:38 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "habitacion/estancia.php"
+[Method: GET, Route: habitacion/estancia/3]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('habitacion/estancia.php')
+ 2 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('habitacion/estancia', [], true)
+ 3 APPPATH\Controllers\Habitacion.php(36): view('habitacion/estancia')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Habitacion->estancia('3')
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Habitacion))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-09 16:16:07 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "habitacion/estancia.php"
+[Method: GET, Route: habitacion/estancia/3]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('habitacion/estancia.php')
+ 2 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('habitacion/estancia', [], true)
+ 3 APPPATH\Controllers\Habitacion.php(36): view('habitacion/estancia')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Habitacion->estancia('3')
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Habitacion))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-09 16:18:30 --> ErrorException: Undefined variable $producto
+[Method: GET, Route: estancia/estancia/3]
+in APPPATH\Views\estancia\estancia.php on line 48.
+ 1 APPPATH\Views\estancia\estancia.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $producto', 'C:\\xampp\\htdocs\\sistema-hotel\\app\\Views\\estancia\\estancia.php', 48)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\sistema-hotel\\app\\Views\\estancia\\estancia.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('estancia/estancia', [], true)
+ 5 APPPATH\Controllers\Estancia.php(31): view('estancia/estancia')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Estancia->estancia('3')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Estancia))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-09 16:19:55 --> ErrorException: Undefined variable $habitacion
+[Method: GET, Route: estancia/estancia/3]
+in APPPATH\Views\estancia\estancia.php on line 44.
+ 1 APPPATH\Views\estancia\estancia.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $habitacion', 'C:\\xampp\\htdocs\\sistema-hotel\\app\\Views\\estancia\\estancia.php', 44)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\sistema-hotel\\app\\Views\\estancia\\estancia.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('estancia/estancia', [], true)
+ 5 APPPATH\Controllers\Estancia.php(31): view('estancia/estancia')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Estancia->estancia('3')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Estancia))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-09 16:23:13 --> ErrorException: Undefined variable $habitacion
+[Method: GET, Route: estancia/estancia/3]
+in APPPATH\Views\estancia\estancia.php on line 44.
+ 1 APPPATH\Views\estancia\estancia.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $habitacion', 'C:\\xampp\\htdocs\\sistema-hotel\\app\\Views\\estancia\\estancia.php', 44)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\sistema-hotel\\app\\Views\\estancia\\estancia.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('estancia/estancia', [], true)
+ 5 APPPATH\Controllers\Estancia.php(31): view('estancia/estancia')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Estancia->estancia('3')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Estancia))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-09 16:24:48 --> ErrorException: Undefined variable $habitacion
+[Method: GET, Route: estancia/estancia/3]
+in APPPATH\Views\estancia\estancia.php on line 44.
+ 1 APPPATH\Views\estancia\estancia.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $habitacion', 'C:\\xampp\\htdocs\\sistema-hotel\\app\\Views\\estancia\\estancia.php', 44)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\sistema-hotel\\app\\Views\\estancia\\estancia.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('estancia/estancia', [], true)
+ 5 APPPATH\Controllers\Estancia.php(31): view('estancia/estancia')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Estancia->estancia('3')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Estancia))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-09 16:32:17 --> ErrorException: Undefined variable $habitacion
+[Method: GET, Route: estancia/estancia/3]
+in APPPATH\Views\estancia\estancia.php on line 44.
+ 1 APPPATH\Views\estancia\estancia.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $habitacion', 'C:\\xampp\\htdocs\\sistema-hotel\\app\\Views\\estancia\\estancia.php', 44)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\sistema-hotel\\app\\Views\\estancia\\estancia.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('estancia/estancia', [], true)
+ 5 APPPATH\Controllers\Estancia.php(30): view('estancia/estancia')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Estancia->estancia('3')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Estancia))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-09 16:39:16 --> ErrorException: Undefined variable $habitacion
+[Method: GET, Route: estancia/estancia/3]
+in APPPATH\Views\estancia\estancia.php on line 44.
+ 1 APPPATH\Views\estancia\estancia.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $habitacion', 'C:\\xampp\\htdocs\\sistema-hotel\\app\\Views\\estancia\\estancia.php', 44)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\sistema-hotel\\app\\Views\\estancia\\estancia.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('estancia/estancia', [], true)
+ 5 APPPATH\Controllers\Estancia.php(30): view('estancia/estancia')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Estancia->estancia('3')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Estancia))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-09 16:39:50 --> ErrorException: Undefined variable $habitacion
+[Method: GET, Route: estancia/estancia/3]
+in APPPATH\Views\estancia\estancia.php on line 44.
+ 1 APPPATH\Views\estancia\estancia.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $habitacion', 'C:\\xampp\\htdocs\\sistema-hotel\\app\\Views\\estancia\\estancia.php', 44)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\sistema-hotel\\app\\Views\\estancia\\estancia.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('estancia/estancia', [], true)
+ 5 APPPATH\Controllers\Estancia.php(30): view('estancia/estancia')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Estancia->estancia('3')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Estancia))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-09 16:39:56 --> ErrorException: Undefined variable $habitacion
+[Method: GET, Route: estancia/estancia/3]
+in APPPATH\Views\estancia\estancia.php on line 44.
+ 1 APPPATH\Views\estancia\estancia.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $habitacion', 'C:\\xampp\\htdocs\\sistema-hotel\\app\\Views\\estancia\\estancia.php', 44)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\sistema-hotel\\app\\Views\\estancia\\estancia.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('estancia/estancia', [], true)
+ 5 APPPATH\Controllers\Estancia.php(30): view('estancia/estancia')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Estancia->estancia('3')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Estancia))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-09 16:40:59 --> ErrorException: Undefined variable $habitacion
+[Method: GET, Route: estancia/estancia/3]
+in APPPATH\Views\estancia\estancia.php on line 44.
+ 1 APPPATH\Views\estancia\estancia.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $habitacion', 'C:\\xampp\\htdocs\\sistema-hotel\\app\\Views\\estancia\\estancia.php', 44)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\sistema-hotel\\app\\Views\\estancia\\estancia.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('estancia/estancia', [], true)
+ 5 APPPATH\Controllers\Estancia.php(30): view('estancia/estancia')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Estancia->estancia('3')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Estancia))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-09 16:48:06 --> ErrorException: Undefined variable $habitacion
+[Method: GET, Route: estancia/estancia/3]
+in APPPATH\Views\estancia\estancia.php on line 44.
+ 1 APPPATH\Views\estancia\estancia.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $habitacion', 'C:\\xampp\\htdocs\\sistema-hotel\\app\\Views\\estancia\\estancia.php', 44)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\sistema-hotel\\app\\Views\\estancia\\estancia.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('estancia/estancia', [], true)
+ 5 APPPATH\Controllers\Estancia.php(30): view('estancia/estancia')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Estancia->estancia('3')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Estancia))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-09 16:49:34 --> ErrorException: Undefined variable $habitacion
+[Method: GET, Route: estancia/estancia/3]
+in APPPATH\Views\estancia\estancia.php on line 44.
+ 1 APPPATH\Views\estancia\estancia.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $habitacion', 'C:\\xampp\\htdocs\\sistema-hotel\\app\\Views\\estancia\\estancia.php', 44)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\sistema-hotel\\app\\Views\\estancia\\estancia.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('estancia/estancia', [], true)
+ 5 APPPATH\Controllers\Estancia.php(30): view('estancia/estancia')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Estancia->estancia('3')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Estancia))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-09 16:50:28 --> ErrorException: Undefined variable $habitacion
+[Method: GET, Route: estancia/estancia/3]
+in APPPATH\Views\estancia\estancia.php on line 44.
+ 1 APPPATH\Views\estancia\estancia.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $habitacion', 'C:\\xampp\\htdocs\\sistema-hotel\\app\\Views\\estancia\\estancia.php', 44)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\sistema-hotel\\app\\Views\\estancia\\estancia.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('estancia/estancia', [], true)
+ 5 APPPATH\Controllers\Estancia.php(30): view('estancia/estancia')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Estancia->estancia('3')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Estancia))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-09 16:57:21 --> ErrorException: Undefined variable $habitacion
+[Method: GET, Route: estancia/estancia/3]
+in APPPATH\Views\estancia\estancia.php on line 43.
+ 1 APPPATH\Views\estancia\estancia.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $habitacion', 'C:\\xampp\\htdocs\\sistema-hotel\\app\\Views\\estancia\\estancia.php', 43)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\sistema-hotel\\app\\Views\\estancia\\estancia.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('estancia/estancia', [], true)
+ 5 APPPATH\Controllers\Estancia.php(30): view('estancia/estancia')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Estancia->estancia('3')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Estancia))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-09 16:57:28 --> ErrorException: Undefined variable $habitacion
+[Method: GET, Route: estancia/estancia/3]
+in APPPATH\Views\estancia\estancia.php on line 43.
+ 1 APPPATH\Views\estancia\estancia.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $habitacion', 'C:\\xampp\\htdocs\\sistema-hotel\\app\\Views\\estancia\\estancia.php', 43)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\sistema-hotel\\app\\Views\\estancia\\estancia.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('estancia/estancia', [], true)
+ 5 APPPATH\Controllers\Estancia.php(30): view('estancia/estancia')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Estancia->estancia('3')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Estancia))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-09 16:57:47 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "estancia/estancia.php"
+[Method: GET, Route: estancia/estancia/3]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('estancia/estancia.php')
+ 2 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('estancia/estancia', [], true)
+ 3 APPPATH\Controllers\Estancia.php(30): view('estancia/estancia')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Estancia->estancia('3')
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Estancia))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-09 16:57:52 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "estancia/estancia.php"
+[Method: GET, Route: estancia/estancia/3]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('estancia/estancia.php')
+ 2 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('estancia/estancia', [], true)
+ 3 APPPATH\Controllers\Estancia.php(30): view('estancia/estancia')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Estancia->estancia('3')
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Estancia))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-09 17:00:17 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "habitacion/recepcion.php"
+[Method: GET, Route: habitacion]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('habitacion/recepcion.php')
+ 2 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('habitacion/recepcion', [], true)
+ 3 APPPATH\Controllers\Habitacion.php(29): view('habitacion/recepcion', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Habitacion->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Habitacion))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-09 17:00:20 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "habitacion/recepcion.php"
+[Method: GET, Route: habitacion]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('habitacion/recepcion.php')
+ 2 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('habitacion/recepcion', [], true)
+ 3 APPPATH\Controllers\Habitacion.php(29): view('habitacion/recepcion', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Habitacion->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Habitacion))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-09 17:00:32 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "habitacion/recepcion.php"
+[Method: GET, Route: habitacion]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('habitacion/recepcion.php')
+ 2 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('habitacion/recepcion', [], true)
+ 3 APPPATH\Controllers\Habitacion.php(29): view('habitacion/recepcion', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Habitacion->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Habitacion))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-09 17:00:53 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "habitacion/recepcion.php"
+[Method: GET, Route: habitacion]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('habitacion/recepcion.php')
+ 2 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('habitacion/recepcion', [], true)
+ 3 APPPATH\Controllers\Habitacion.php(29): view('habitacion/recepcion', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Habitacion->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Habitacion))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-09 17:01:55 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "recepcion/recepcion.php"
+[Method: GET, Route: habitacion]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('recepcion/recepcion.php')
+ 2 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('recepcion/recepcion', [], true)
+ 3 APPPATH\Controllers\Habitacion.php(29): view('recepcion/recepcion', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Habitacion->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Habitacion))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-09 17:05:08 --> ErrorException: Undefined variable $habitacion
+[Method: GET, Route: habitacion/estancia/3]
+in APPPATH\Views\habitacion\estancia.php on line 43.
+ 1 APPPATH\Views\habitacion\estancia.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $habitacion', 'C:\\xampp\\htdocs\\sistema-hotel\\app\\Views\\habitacion\\estancia.php', 43)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\sistema-hotel\\app\\Views\\habitacion\\estancia.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('habitacion/estancia', [], true)
+ 5 APPPATH\Controllers\Habitacion.php(36): view('habitacion/estancia')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Habitacion->estancia('3')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Habitacion))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-09 19:50:19 --> ParseError: syntax error, unexpected double-quoted string " method="
+[Method: GET, Route: habitacion/estancia/3]
+in APPPATH\Views\habitacion\estancia.php on line 1.
+ 1 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('habitacion/estancia', [], true)
+ 3 APPPATH\Controllers\Habitacion.php(36): view('habitacion/estancia')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Habitacion->estancia('3')
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Habitacion))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-09 19:52:42 --> Error: Class "App\Controllers\EstanciaService" not found
+[Method: POST, Route: estancia/crearEstancia]
+in APPPATH\Controllers\Estancia.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Estancia->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-09 19:53:57 --> Error: Class "App\Controllers\EstanciaService" not found
+[Method: POST, Route: estancia/crearEstancia]
+in APPPATH\Controllers\Estancia.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Estancia->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-09 20:10:22 --> ParseError: syntax error, unexpected token "<", expecting end of file
+[Method: GET, Route: habitacion/estancia/3]
+in APPPATH\Models\HabitacionModel.php on line 20.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\sistema-hotel\\app\\Models\\HabitacionModel.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\HabitacionModel')
+ 3 APPPATH\Controllers\Habitacion.php(14): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\HabitacionModel')
+ 4 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Habitacion->__construct()
+ 5 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-09 20:13:14 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "habitacion/lista.php"
+[Method: GET, Route: estancia/listarHabitaciones]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('habitacion/lista.php')
+ 2 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('habitacion/lista', [], true)
+ 3 APPPATH\Controllers\Estancia.php(22): view('habitacion/lista', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Estancia->listarHabitaciones()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Estancia))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-09 20:14:13 --> ParseError: syntax error, unexpected token "return", expecting "," or ";"
+[Method: GET, Route: estancia/listarHabitaciones]
+in APPPATH\Controllers\Estancia.php on line 25.
+ 1 SYSTEMPATH\Router\Router.php(563): CodeIgniter\Router\AutoRouter->getRoute('estancia/listarHabitaciones', 'GET')
+ 2 SYSTEMPATH\Router\Router.php(228): CodeIgniter\Router\Router->autoRoute('estancia/listarHabitaciones')
+ 3 SYSTEMPATH\CodeIgniter.php(834): CodeIgniter\Router\Router->handle('estancia/listarHabitaciones')
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-09 20:14:46 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "habitacion/ar.php"
+[Method: GET, Route: estancia/listarHabitaciones]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('habitacion/ar.php')
+ 2 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('habitacion/ar', [], true)
+ 3 APPPATH\Controllers\Estancia.php(23): view('habitacion/ar', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Estancia->listarHabitaciones()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Estancia))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-09 20:17:10 --> ParseError: syntax error, unexpected token "<", expecting "function" or "const"
+[Method: GET, Route: estancia/listarHabitaciones]
+in APPPATH\Controllers\Estancia.php on line 15.
+ 1 SYSTEMPATH\Router\Router.php(563): CodeIgniter\Router\AutoRouter->getRoute('estancia/listarHabitaciones', 'GET')
+ 2 SYSTEMPATH\Router\Router.php(228): CodeIgniter\Router\Router->autoRoute('estancia/listarHabitaciones')
+ 3 SYSTEMPATH\CodeIgniter.php(834): CodeIgniter\Router\Router->handle('estancia/listarHabitaciones')
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-09 20:18:10 --> ErrorException: Undefined variable $habitaciones
+[Method: GET, Route: habitacion/estancia/3]
+in APPPATH\Views\habitacion\estancia.php on line 31.
+ 1 APPPATH\Views\habitacion\estancia.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $habitaciones', 'C:\\xampp\\htdocs\\sistema-hotel\\app\\Views\\habitacion\\estancia.php', 31)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\sistema-hotel\\app\\Views\\habitacion\\estancia.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('habitacion/estancia', [], true)
+ 5 APPPATH\Controllers\Habitacion.php(36): view('habitacion/estancia')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Habitacion->estancia('3')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Habitacion))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-09 20:19:02 --> ErrorException: Undefined variable $habitaciones
+[Method: GET, Route: estancia/verHabitacion/3]
+in APPPATH\Controllers\Estancia.php on line 28.
+ 1 APPPATH\Controllers\Estancia.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $habitaciones', 'C:\\xampp\\htdocs\\sistema-hotel\\app\\Controllers\\Estancia.php', 28)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Estancia->verHabitacion('3')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Estancia))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-09 20:27:29 --> ErrorException: Undefined variable $habitaciones
+[Method: GET, Route: estancia/verHabitacion/3]
+in APPPATH\Controllers\Estancia.php on line 28.
+ 1 APPPATH\Controllers\Estancia.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $habitaciones', 'C:\\xampp\\htdocs\\sistema-hotel\\app\\Controllers\\Estancia.php', 28)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Estancia->verHabitacion('3')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Estancia))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-09 20:29:29 --> ErrorException: Undefined variable $habitaciones
+[Method: GET, Route: estancia/verHabitacion/3]
+in APPPATH\Views\habitacion\estancia.php on line 31.
+ 1 APPPATH\Views\habitacion\estancia.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $habitaciones', 'C:\\xampp\\htdocs\\sistema-hotel\\app\\Views\\habitacion\\estancia.php', 31)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\sistema-hotel\\app\\Views\\habitacion\\estancia.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('habitacion/estancia', [], true)
+ 5 APPPATH\Controllers\Estancia.php(23): view('habitacion/estancia', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Estancia->verHabitacion('3')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Estancia))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-09 20:29:34 --> ErrorException: Undefined variable $habitaciones
+[Method: GET, Route: estancia/verHabitacion/3]
+in APPPATH\Views\habitacion\estancia.php on line 31.
+ 1 APPPATH\Views\habitacion\estancia.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $habitaciones', 'C:\\xampp\\htdocs\\sistema-hotel\\app\\Views\\habitacion\\estancia.php', 31)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\sistema-hotel\\app\\Views\\habitacion\\estancia.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('habitacion/estancia', [], true)
+ 5 APPPATH\Controllers\Estancia.php(23): view('habitacion/estancia', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Estancia->verHabitacion('3')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Estancia))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
